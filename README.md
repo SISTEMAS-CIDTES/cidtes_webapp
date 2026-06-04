@@ -83,27 +83,48 @@ El sitio contiene páginas independientes para cada unidad de negocio:
 
 Este proyecto usa **pnpm**, no `npm`. El repositorio incluye `pnpm-lock.yaml`, así que el gestor correcto es `pnpm`.
 
+Además, este proyecto debe correrse con **Node 22**. Se detectó que con `Node 24` puede quedarse colgado al compilar en desarrollo.
+
 ### Requisitos recomendados
 
-- `Node.js 20` o `Node.js 22`
-- `pnpm 10+`
+- `nvm`
+- `Node.js 22`
+- `pnpm`
 
-### Instalación
+### Primer arranque recomendado
+
+Si usas `nvm`, corre esto desde la raíz del proyecto:
 
 ```bash
+nvm use
+corepack enable
 pnpm install
-```
-
-### Desarrollo
-
-```bash
 pnpm dev
 ```
 
-Abre:
+Luego abre:
 
 ```bash
 http://localhost:3000
+```
+
+### Si no tienes `nvm`
+
+Instala o cambia manualmente a `Node 22` antes de correr `pnpm dev`.
+
+### Instalación manual por pasos
+
+```bash
+nvm use
+corepack enable
+pnpm install
+pnpm dev
+```
+
+### Apagar el servidor
+
+```bash
+Ctrl + C
 ```
 
 ### Build de producción
@@ -564,11 +585,29 @@ pnpm lint
 
 Usa `pnpm install`. Este repositorio está preparado para `pnpm` y cuenta con `pnpm-lock.yaml`.
 
+### `pnpm dev` se queda en `Compiling / ...`
+
+Verifica que estés usando `Node 22`:
+
+```bash
+nvm use
+node -v
+```
+
+Si sigue raro, limpia el entorno local y reinstala:
+
+```bash
+rm -rf .next node_modules
+pnpm install
+pnpm dev
+```
+
 ### La web no abre
 
 Verifica que estés corriendo:
 
 ```bash
+nvm use
 pnpm dev
 ```
 
