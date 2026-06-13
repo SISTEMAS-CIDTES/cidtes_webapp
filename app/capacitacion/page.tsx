@@ -68,7 +68,7 @@ export default function CapacitacionPage() {
                     duraderos y funcionales.
                   </p>
 
-                  <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales</span>y las respaldamos a través de </p>
+                  <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales</span>y las respaldamos a través de: </p>
                 </div>
               </div>
 
