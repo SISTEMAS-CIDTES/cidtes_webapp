@@ -58,8 +58,7 @@ export default function CapacitacionPage() {
                 {/* Description Text */}
                 <div className="space-y-6 text-gray-800 leading-relaxed text-lg">
                   <p>
-                    En nuestros cursos, hemos desarrollado una metodología sólida alineada con la competitividad,{" "}
-                    <span className="font-bold">fomentando un entorno de aprendizaje</span> relevante para el desarrollo
+                    En nuestros cursos, hemos desarrollado una metodología sólida alineada con la competitividad,fomentando un entorno de aprendizaje</span> relevante para el desarrollo
                     personal y profesional.
                   </p>
 
@@ -69,7 +68,7 @@ export default function CapacitacionPage() {
                     duraderos y funcionales.
                   </p>
 
-                  <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales.</p>
+                  <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales</span>y las respaldamos a través de </p>
                 </div>
               </div>
 
