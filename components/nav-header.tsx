@@ -21,7 +21,7 @@ export function NavHeader() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <Image src="/images/logo-simple.png" alt="CIDTES Logo" width={80} height={40} className="h-10 w-auto" />
+            <Image src="/images/cidtes-logo.png" alt="CIDTES Logo" width={80} height={40} className="h-10 w-auto" />
           </Link>
 
           {/* Desktop nav */}
@@ -33,7 +33,14 @@ export function NavHeader() {
                   href={link.href}
                   className="relative text-gray-700 font-medium px-6 py-3 rounded-lg transition-all duration-500 hover:text-white group overflow-hidden transform hover:scale-105"
                 >
-                  <span className="relative z-10 transition-colors duration-500">{link.label}</span>
+                  <span 
+                    className="relative font-bold z-10 transition-colors duration-500 bg-clip-text text-transparent group-hover:text-white"
+                      style={{
+                        backgroundImage: "linear-gradient(to right, #084E9F, #059669)",
+                      }}
+                    >
+                    {link.label}
+                  </span>
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#6B46C1] via-[#0891B2] to-[#059669] opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0 rounded-lg shadow-lg group-hover:shadow-xl"></div>
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#6B46C1] via-[#0891B2] to-[#059669] opacity-20 scale-0 group-hover:scale-110 transition-all duration-700 rounded-lg blur-sm"></div>
                 </Link>
