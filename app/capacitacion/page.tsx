@@ -199,10 +199,10 @@ export default function CapacitacionPage() {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#1D63ED] rounded-full mr-3"></div>
                   <a
-                    href="mailto:cidtes@energiaysustentabilidad.org"
+                    href="mailto:contacto@cidtes.org"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    cidtes@energiaysustentabilidad.org
+                    contacto@cidtes.org
                   </a>
                 </div>
                 <div className="flex items-center">
