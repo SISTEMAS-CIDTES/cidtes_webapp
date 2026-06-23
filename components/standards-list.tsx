@@ -36,7 +36,7 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
   {
     title: "Manufactura",
     color: "#5DCCCC",
-    codes: [{ code: "EC0467", pdf: "/pdf/estandares/1.1.pdf" }],
+    codes: [{ code: "EC0467", pdf: "/pdf/estandares/EC0467.pdf" }],
   },
   {
     title: "Sustancias químicas",
@@ -46,7 +46,7 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
   {
     title: "Fotovoltaico",
     color: "#5DCCCC",
-    codes: [{ code: "EC0586.01", pdf: "/pdf/estandares/EC0586-01.pdf" }],
+    codes: [{ code: "EC0586.01", pdf: "/pdf/estandares/EC0586.01.pdf" }],
   },
 ]
 
