@@ -2,6 +2,17 @@
 
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
+const scrollToContact = () => {
+  const footer = document.getElementById("contacto")
+
+  if (footer) {
+    footer.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
+  }
+}
+
 export default function CertificationExtendedContent() {
   return (
     <div className="w-full space-y-16 py-12">
@@ -106,7 +117,10 @@ export default function CertificationExtendedContent() {
           </li>
         </ul>
         <div className="flex justify-center pt-6">
-          <button className="px-8 py-3 rounded-lg font-semibold text-white bg-[#0369A1] hover:bg-[#0251A0] transition-all duration-300 hover:shadow-lg">
+          <button
+            onClick={scrollToContact}
+            className="px-8 py-3 rounded-lg font-semibold text-white bg-[#0369A1] hover:bg-[#0251A0] transition-all duration-300 hover:shadow-lg"
+          >
             Más información
           </button>
         </div>
@@ -122,7 +136,7 @@ export default function CertificationExtendedContent() {
           {/* CE Column */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-[#005BB1]">Centro de Evaluación (CE)</h3>
-            <ul className="space-y-3 text-gray-800 text-sm">
+            <ul className="space-y-3 text-gray-800 text-base">
               <li className="flex items-start gap-3">
                 <span className="font-bold text-[#005BB1] flex-shrink-0">1.</span>
                 <span>Firma de convenio de colaboración para la acreditación y operación como CE</span>
@@ -161,7 +175,7 @@ export default function CertificationExtendedContent() {
           {/* EI Column */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-[#005BB1]">Evaluador Independiente (EI)</h3>
-            <ul className="space-y-3 text-gray-800 text-sm">
+            <ul className="space-y-3 text-gray-800 text-base">
               <li className="flex items-start gap-3">
                 <span className="font-bold text-[#005BB1] flex-shrink-0">1.</span>
                 <span>Firma de convenio de colaboración para la acreditación y operación como EI</span>
@@ -182,10 +196,6 @@ export default function CertificationExtendedContent() {
                 <span className="font-bold text-[#005BB1] flex-shrink-0">5.</span>
                 <span>Copia de comprobante de domicilio</span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="font-bold text-[#005BB1] flex-shrink-0">6.</span>
-                <span>Comprobar documentalmente la existencia o acceso a infraestructura administrativa y de equipamiento para realizar las funciones como CE en congruencia con los estándares de Competencia Laboral que solicita.</span>
-              </li>
             </ul>
           </div>
         </div>
@@ -193,7 +203,7 @@ export default function CertificationExtendedContent() {
         {/* Additional Requirements */}
         <div className="mt-8 pt-8 border-t-2 border-gray-200 space-y-4">
           <h4 className="text-xl font-bold text-[#005BB1]">Para la operación del CE deben tener:</h4>
-          <ol className="space-y-3 text-gray-800 text-sm ml-4">
+          <ol className="space-y-3 text-gray-800 text-base ml-4">
             <li className="flex items-start gap-3">
               <span className="font-bold text-[#005BB1] flex-shrink-0">i.</span>
               <span>Capacidad técnica para la recopilación de evidencias del desempeño laboral en el sitio de trabajo o en situación simulada.</span>
@@ -220,3 +230,4 @@ export default function CertificationExtendedContent() {
     </div>
   )
 }
+
