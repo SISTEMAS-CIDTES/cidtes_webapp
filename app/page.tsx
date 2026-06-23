@@ -16,10 +16,11 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   const carouselImages = [
-    "/images/eficiencia-energetica.jpg",
-    "/images/certificacion-valuadores.jpg",
-    "/images/seguridad-salud.webp",
-    "/images/gestion-ambiental.jpg",
+    "/images/Image1.1.jpeg",
+    "/images/Image1.2.jpeg",
+    "/images/Image1.3.jpeg",
+    "/images/Image1.4.jpeg",
+    "/images/Image1.5.jpeg",
   ]
 
   const commitments = [
@@ -118,9 +119,10 @@ export default function HomePage() {
     "11.png",
     "12.webp",
     "13.jpeg",
+    "14.png"
   ]
 
-  const collaborations = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.png", "8.jpg", "9.png", "10.webp"]
+  const collaborations = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.png", "8.jpg", "9.webp"]
 
   const repeatedClients = [...clients, ...clients, ...clients]
   const repeatedPartners = [...partners, ...partners, ...partners]
@@ -238,7 +240,7 @@ export default function HomePage() {
                   <h2 className="font-medium font-sans leading-9 text-3xl text-white">¿Quiénes somos?</h2>
                 </div>
 
-                <div className="space-y-4 text-gray-800 leading-relaxed">
+                <div className="space-y-4 text-gray-800 leading-relaxed ">
                   <p className="font-semibold mx-0 my-0 px-4 sm:px-20 text-justify">
                     Iniciamos operaciones formalmente en 2010 y nuestros expertos cuentan como más de 30 años de
                     experiencia.
@@ -250,28 +252,27 @@ export default function HomePage() {
                     organizacional.
                   </p>
 
-                  <p className="px-4 sm:px-20">
-                    Promovemos la capacitación, la certificación, la
-                    investigación, el desarrollo tecnológico y la implementación de proyectos para mejores prácticas.
-                  </p>
                 </div>
               </div>
 
               {/* Right Content - Carousel */}
               <div className="relative">
-                <div className="relative w-full max-w-2xl rounded-lg overflow-hidden shadow-xl">
+                <div className="relative w-full h-[500px] object-contain rounded-lg">
                   {carouselImages.map((image, index) => (
                     <div
                       key={index}
-                      className={`transition-opacity duration-1000 cursor-pointer ${index === currentSlide ? "opacity-100" : "opacity-0 pointer-events-none"} ${index !== 0 ? "absolute inset-0" : ""}`}
+                      className={`absolute inset-0 transition-opacity duration-1000 cursor-pointer ${
+                        index === currentSlide
+                          ? "opacity-100"
+                          : "opacity-0 pointer-events-none"
+                      }`}
                       onClick={() => openModal(carouselImages[currentSlide])}
                     >
                       <Image
-                        src={image || "/placeholder.svg"}
+                        src={image}
                         alt={`Slide ${index + 1}`}
-                        width={800}
-                        height={600}
-                        className="w-full h-auto object-contain rounded-lg"
+                        fill
+                        className="object-contain"
                       />
                     </div>
                   ))}
@@ -728,25 +729,14 @@ export default function HomePage() {
                     {selectedService && serviceContent[selectedService] ? (
                       <>
                         {serviceContent[selectedService].description.map((paragraph, index) => (
-                          <p key={index} className={`text-base ${index === 0 ? "text-lg" : ""}`}>
+                          <p key={index} className="text-lg">
                             {paragraph}
                           </p>
                         ))}
                       </>
                     ) : (
                       <>
-                        <p className="font-semibold text-lg">
-                          Iniciamos operaciones formalmente en 2010 y nuestros expertos cuentan como más de 30 años de
-                          experiencia.
-                        </p>
-
-                        <p className="text-base">
-                          Somos una organización interdisciplinaria que brinda{" "}
-                          soluciones integrales en energía, ambiente, sustentabilidad, seguridad y salud en el trabajo y
-                          desarrollo organizacional.
-                        </p>
-
-                        <p className="text-base">
+                        <p className="text-base text-lg">
                           Promovemos la capacitación, la certificación, la
                           investigación, el desarrollo tecnológico y la implementación de proyectos para mejores
                           prácticas.
@@ -848,7 +838,7 @@ export default function HomePage() {
                     href="tel:+525568125783"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    +52 (55) 6812-5783
+                    +52 55 6812 5783
                   </a>
                 </div>
               </div>
@@ -934,7 +924,7 @@ export default function HomePage() {
 
               {/* Copyright and Legal Links */}
               <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-700">
-                <span>© 2026 CIDTES Energía y Sustentabilidad.</span>
+                <span>© 2025 CIDTES Energía y Sustentabilidad.</span>
                 <span>|</span>
                 <span>Todos los derechos reservados.</span>
                 <span>|</span>
