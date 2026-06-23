@@ -15,7 +15,7 @@ title: "Formativo",
 codes: [
 { code: "EC0076", pdf: "/pdf/ESTANDARES/EC0076.pdf" },
 { code: "EC0217.01", pdf: "/pdf/ESTANDARES/EC0217.01.pdf" },
-{ code: "EC0301", pdf: "/pdf/ESTANDARES/EC0301.pdf" },
+{ code: "EC0301", pdf: "/pdf/ESTANDARES/ECO301.pdf" },
 { code: "EC0366", pdf: "/pdf/ESTANDARES/EC0366.pdf" },
 ],
 },
@@ -41,7 +41,7 @@ codes: [
 {
 title: "S.Salud en el Trabajo",
 codes: [
-{ code: "EC0391.01", pdf: "/pdf/ESTANDARES/EC0391.01.pdf" },
+{ code: "EC0391", pdf: "/pdf/ESTANDARES/EC0391.pdf" },
 { code: "EC0493", pdf: "/pdf/ESTANDARES/EC0493.pdf" },
 { code: "EC0397.01", pdf: "/pdf/ESTANDARES/EC0397.01.pdf" },
 { code: "EC0680", pdf: "/pdf/ESTANDARES/EC0680.pdf" },
