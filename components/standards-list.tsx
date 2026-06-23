@@ -18,9 +18,9 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
     title: "Gestión ambiental",
     color: "#5DCCCC",
     codes: [
-      { code: "ECO490", pdf: "/pdf/estandares/EC0490.pdf" },
-      { code: "EC0517", pdf: "/pdf/estandares/EC0517.pdf" },
-      { code: "EC1543", pdf: "/pdf/estandares/EC1543.pdf" },
+      { code: "ECO490", pdf: "/pdf/ESTANDARES/EC0490.pdf" },
+      { code: "EC0517", pdf: "/pdf/ESTANDARES/EC0517.pdf" },
+      { code: "EC1543", pdf: "/pdf/ESTANDARES/EC1543.pdf" },
     ],
     image: "/images/gestion-ambiental.png",
   },
@@ -28,25 +28,25 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
     title: "Administración-Contabilidad",
     color: "#5DCCCC",
     codes: [
-      { code: "EC1017", pdf: "/pdf/estandares/EC1017.pdf" },
-      { code: "EC1018", pdf: "/pdf/estandares/EC1018.pdf" },
+      { code: "EC1017", pdf: "/pdf/ESTANDARES/EC1017.pdf" },
+      { code: "EC1018", pdf: "/pdf/ESTANDARES/EC1018.pdf" },
     ],
     image: "/images/administracion-contabilidad.png",
   },
   {
     title: "Manufactura",
     color: "#5DCCCC",
-    codes: [{ code: "EC0467", pdf: "/pdf/estandares/EC0467.pdf" }],
+    codes: [{ code: "EC0467", pdf: "/pdf/ESTANDARES/EC0467.pdf" }],
   },
   {
     title: "Sustancias químicas",
     color: "#5DCCCC",
-    codes: [{ code: "EC1022", pdf: "/pdf/estandares/EC1022.pdf" }],
+    codes: [{ code: "EC1022", pdf: "/pdf/ESTANDARES/EC1022.pdf" }],
   },
   {
     title: "Fotovoltaico",
     color: "#5DCCCC",
-    codes: [{ code: "EC0586.01", pdf: "/pdf/estandares/EC0586.01.pdf" }],
+    codes: [{ code: "EC0586.01", pdf: "/pdf/ESTANDARES/EC0586.01.pdf" }],
   },
 ]
 
