@@ -53,13 +53,25 @@ export default function CertificationContent({ activeSection }: CertificationCon
   if (activeSection === null) {
     return (
       <div className="flex flex-col items-end justify-center min-h-screen">
-        <div className="text-right space-y-2">
-          <h2 className="text-6xl font-bold text-gray-600" style={{ fontWeight: 700 }}>
-            Interactúa con el
-          </h2>
-          <p className="text-6xl font-bold text-gray-600" style={{ fontWeight: 700 }}>
-            círculo CIDTES
-          </p>
+        <div className="text-right space-y-12">
+          <div className="flex flex-col items-end">
+            <img
+              src="/images/ECE-logo.png"
+              alt="Logo CONOCER"
+              className="h-32 w-auto mb-3"
+            />
+
+            <h2 className="text-5xl font-semibold text-gray-600 max-w-xl" style={{ fontWeight: 700 }}>
+              Somos una Entidad de Certificación y Evaluación{" "}
+              <span className="font-bold">ECE472-21</span> acreditada ante el
+              CONOCER
+            </h2>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-gray-600">
+              Interactúa con el círculo CIDTES
+            </p>
+          </div>
         </div>
       </div>
     )
@@ -109,10 +121,10 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 borderLeftWidth: "6px",
               }}
             >
-              <p className="text-sm font-bold mb-3" style={{ color: style.title }}>
+              <p className="text-base font-bold mb-3" style={{ color: style.title }}>
                 ¿Qué es un estándar de competencia?
               </p>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-base text-gray-700 leading-relaxed">
                 Es un <span className="font-bold">documento oficial</span> aplicable en toda la República Mexicana que
                 sirve de <span className="font-bold">referencia para evaluar y certificar</span> la competencia de las
                 personas.
@@ -127,15 +139,15 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 borderLeftWidth: "6px",
               }}
             >
-              <p className="text-sm font-bold mb-3" style={{ color: style.title }}>
+              <p className="text-base font-bold mb-3" style={{ color: style.title }}>
                 ¿Qué es la Certificación de Competencia Laboral?
               </p>
-              <p className="text-sm text-gray-700 leading-relaxed">
+              <p className="text-base text-gray-700 leading-relaxed">
                 La certificación de competencias <span className="font-bold">es el proceso</span> a través del cual las
                 personas{" "}
                 <span className="font-bold">
-                  demuestran por medio de evidencias: los conocimientos, habilidades y destrezas.
-                </span>
+                  demuestran por medio de evidencias: los conocimientos, habilidades y destrezas
+                </span> necesarias para cumplir una función en su sector y/o área laboral, a un alto nivel de desempeño.
               </p>
             </div>
           </>
@@ -151,15 +163,11 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 borderLeftWidth: "6px",
               }}
             >
-              <p className="text-base text-gray-800 leading-relaxed">
-                <span className="font-bold" style={{ color: style.title }}>
-                  El proceso de evaluación y certificación
-                </span>{" "}
-                es una entidad paraestatal sectorizada de la Secretaría de Educación Pública (SEP),{" "}
-                <span className="font-bold">
-                  conformado por un órgano de gobierno tripartita con representantes de los trabajadores, los
-                  empresarios y el gobierno.
-                </span>
+              <p className="text-base font-bold mb-3" style={{ color: style.title }}>
+                Paso 1: Registro del candidato.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                A través de un formulario se solicitan los datos generales del candidato para la apertura de su expendiente.
               </p>
             </div>
 
@@ -171,22 +179,36 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 borderLeftWidth: "6px",
               }}
             >
-              <p className="text-sm font-bold mb-3" style={{ color: style.title }}>
-                ¿Qué es un estándar de competencia?
+              <p className="text-base font-bold mb-3" style={{ color: style.title }}>
+                Paso 2: Aplicación de la evaluación diagnóstica.
               </p>
-              <p className="text-sm text-gray-700 leading-relaxed">
-                La certificación de competencias <span className="font-bold">es el proceso</span> a través del cual las
-                personas <span className="font-bold">demuestran</span> por medio de evidencias: los conocimientos,
-                habilidades y destrezas.
+              <p className="text-base text-gray-700 leading-relaxed">
+                Se aplica una evaluación diagnóstica sin costo y de acuerdo con los resultados se sugiere realizar la evaluación o capacitarse.
               </p>
             </div>
+
+            <div
+              className="border-l-4 px-6 py-5 rounded-xl shadow-md"
+              style={{
+                borderColor: style.borderColor,
+                backgroundColor: "white",
+                borderLeftWidth: "6px",
+              }}
+            >
+              <p className="text-base font-bold mb-3" style={{ color: style.title }}>
+                Paso 3: Curso de alineación sobre el estándar.
+              </p>
+              <p className="text-base text-gray-700 leading-relaxed">
+                Es una orientación sobre la estructura, aspectos técnicos y conocimientos del estándar que el candidato deberá poseer previos a la evaluación.
+              </p>
+            </div>            
           </>
         )}
 
         {activeSection === 2 && (
           <>
             <p
-              className="text-xs font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
+              className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
               style={{ color: style.accent }}
             >
               Estándares ofertados: EC0076, EC0865, EC1182
@@ -212,7 +234,7 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 <div key={idx}>
                   {idx === 1 && center.standards && (
                     <p
-                      className="text-xs font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
+                      className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
                       style={{ color: style.accent }}
                     >
                       Estándares ofertados: {center.standards}
@@ -286,13 +308,21 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 Formativo
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["EC0076", "EC0217.01", "EC0301", "EC0366"].map((code) => (
-                  <button
-                    key={code}
-                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300"
+                {[
+                  { code: "EC0076", pdf: "" },
+                  { code: "EC0217.01", pdf: "" }, 
+                  { code: "EC0301", pdf: "" }, 
+                  { code: "EC0366", pdf: "" }
+                ].map((item) => (
+                  <a
+                    key={item.code}
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300 inline-block"
                   >
-                    {code}
-                  </button>
+                    {item.code}
+                  </a>
                 ))}
               </div>
             </div>
@@ -303,13 +333,21 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 Valuación
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["EC0664", "EC0865", "EC1182", "EC1306"].map((code) => (
-                  <button
-                    key={code}
-                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300"
+                {[
+                  { code: "EC0664", pdf: "" },
+                  { code: "EC0865", pdf: "" },
+                  { code: "EC1182", pdf: "" }, 
+                  { code: "EC1306", pdf: "" }
+                ].map((item) => (
+                  <a
+                    key={item.code}
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300 inline-block"
                   >
-                    {code}
-                  </button>
+                    {item.code}
+                  </a>
                 ))}
               </div>
             </div>
@@ -320,13 +358,22 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 Energía
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["EC0412", "EC0413", "EC0416", "EC0431", "EC0414"].map((code) => (
-                  <button
-                    key={code}
-                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300"
+                {[
+                  { code: "EC0412", pdf: "" },
+                  { code: "EC0413", pdf: "" },
+                  { code: "EC0416", pdf: "" },
+                  { code: "EC0431", pdf: "" },
+                  { code: "EC0414", pdf: "" }
+                ].map((item) => (
+                  <a
+                    key={item.code}
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300 inline-block"
                   >
-                    {code}
-                  </button>
+                    {item.code}
+                  </a>
                 ))}
               </div>
             </div>
@@ -337,13 +384,21 @@ export default function CertificationContent({ activeSection }: CertificationCon
                 S.Salud en el Trabajo
               </h3>
               <div className="flex flex-wrap gap-2">
-                {["EC0391.01", "EC0493", "EC0397.01", "EC0680"].map((code) => (
-                  <button
-                    key={code}
-                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300"
+                {[
+                  { code: "EC0391.01", pdf: "" },
+                  { code: "EC0493", pdf: "" },
+                  { code: "EC0397.01", pdf: "" },
+                  { code: "EC0680", pdf: "" }
+                ].map((item) => (
+                  <a
+                    key={item.code}
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 bg-gray-100/80 backdrop-blur-sm text-gray-700 text-sm font-medium rounded-lg shadow-sm hover:shadow-md transition-all duration-200 hover:scale-105 border border-gray-300 inline-block"
                   >
-                    {code}
-                  </button>
+                    {item.code}
+                  </a>
                 ))}
               </div>
             </div>
@@ -353,3 +408,4 @@ export default function CertificationContent({ activeSection }: CertificationCon
     </div>
   )
 }
+
