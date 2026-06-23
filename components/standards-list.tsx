@@ -3,7 +3,10 @@
 interface StandardCategory {
   title: string
   color: string
-  codes: string[]
+  codes: {
+    code: string
+    pdf: string
+  }[]
   image?: string
 }
 
@@ -11,24 +14,42 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
   {
     title: "Gestión ambiental",
     color: "#5DCCCC",
-    codes: ["EC0490", "EC0517", "EC1543"],
+    codes: [
+      { code: "EC0490", pdf: "" },
+      { code: "EC0517", pdf: "" },
+      { code: "EC1543", pdf: "" }
+    ],
     image: "/images/gestion-ambiental.png",
   },
   {
     title: "Administración-Contabilidad",
     color: "#5DCCCC",
-    codes: ["EC1017", "EC1018"],
+    codes: [
+      { code: "EC1017", pdf: "" },
+      { code: "EC1018", pdf: "" }
+    ],
     image: "/images/administracion-contabilidad.png",
   },
   {
     title: "Manufactura",
     color: "#5DCCCC",
-    codes: ["EC0467"],
+    codes: [
+      { code: "EC0467", pdf: "" }
+    ],
   },
   {
     title: "Sustancias químicas",
     color: "#5DCCCC",
-    codes: ["EC1022"],
+    codes: [
+      { code: "EC1022", pdf: "" }
+    ],
+  },
+  {
+    title: "Foltovoltaico",
+    color: "#5DCCCC",
+    codes: [
+      { code: "", pdf: "" }
+    ],
   },
 ]
 
@@ -55,7 +76,7 @@ export default function StandardsList() {
           <div key={index} className="space-y-3">
             {/* Category Title with white background */}
             <h3
-              className="text-3xl md:text-4xl font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block"
+              className="text-2xl font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block"
               style={{ color: category.color }}
             >
               {category.title}
@@ -63,13 +84,16 @@ export default function StandardsList() {
 
             {/* Standards Pills - WITHOUT white background */}
             <div className="flex flex-wrap gap-3">
-              {category.codes.map((code, codeIndex) => (
-                <button
-                  key={codeIndex}
-                  className="px-5 py-2.5 bg-gray-100/80 backdrop-blur-sm border border-gray-300 rounded-full text-gray-700 font-medium text-sm hover:border-cyan-500 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-200 shadow-sm hover:shadow-md"
-                >
-                  {code}
-                </button>
+              {category.codes.map((item, codeIndex) => (
+                <a
+                key={codeIndex}
+                href={item.pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-gray-100/80 backdrop-blur-sm border border-gray-300 rounded-full text-gray-700 font-medium text-sm hover:border-cyan-500 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-200 shadow-sm hover:shadow-md"
+              >
+                {item.code}
+              </a>
               ))}
             </div>
           </div>
@@ -78,3 +102,4 @@ export default function StandardsList() {
     </div>
   )
 }
+
