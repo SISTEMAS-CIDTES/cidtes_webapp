@@ -18,7 +18,7 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
     title: "Gestión ambiental",
     color: "#5DCCCC",
     codes: [
-      { code: "ECO490", pdf: "/pdf/estandares/EC0490.pdf" },
+      { code: "ECO490", pdf: "/pdfs/estandares/EC0490.pdf" },
       { code: "EC0517", pdf: "/pdfs/estandares/EC0517.pdf" },
       { code: "EC1543", pdf: "/pdfs/estandares/EC1543.pdf" },
     ],
