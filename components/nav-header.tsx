@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/capacitacion", label: "Capacitación" },
   { href: "/certificacion", label: "Certificación" },
   { href: "/consultoria", label: "Consultoría" },
-  { href: "/investigacion-consultoria", label: "Investigación y Consultoría" },
+  { href: "/investigacion-consultoria", label: "Investigación" },
   { href: "/proyectos", label: "Proyectos" },
 ]
 
@@ -79,3 +79,4 @@ export function NavHeader() {
     </header>
   )
 }
+
