@@ -168,3 +168,4 @@ export function CourseModal({ isOpen, onClose, title, courses }: CourseModalProp
     </div>
   )
 }
+
