@@ -67,7 +67,7 @@ export default function CertificationExtendedContent() {
             <ArrowRight size={32} className="text-[#005BB1]" />
             <div
               className="px-6 py-4 rounded-lg border-2 text-center font-semibold text-sm"
-              style={{ borderColor: "#005BB1", color: "#8B8B8B" }}
+              style={{ borderColor: "#005BB1", color: "#005BB1" }}
             >
               Persona Física
             </div>
@@ -182,7 +182,7 @@ export default function CertificationExtendedContent() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="font-bold text-[#005BB1] flex-shrink-0">2.</span>
-                <span>CV</span>
+                <span>CV actualizado</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="font-bold text-[#005BB1] flex-shrink-0">3.</span>
@@ -202,7 +202,7 @@ export default function CertificationExtendedContent() {
 
         {/* Additional Requirements */}
         <div className="mt-8 pt-8 border-t-2 border-gray-200 space-y-4">
-          <h4 className="text-xl font-bold text-[#005BB1]">Para la operación del CE deben tener:</h4>
+          <h4 className="text-xl font-bold text-[#005BB1]">Para la operación del CE/EI deben tener:</h4>
           <ol className="space-y-3 text-gray-800 text-base ml-4">
             <li className="flex items-start gap-3">
               <span className="font-bold text-[#005BB1] flex-shrink-0">i.</span>
@@ -230,4 +230,5 @@ export default function CertificationExtendedContent() {
     </div>
   )
 }
+
 
