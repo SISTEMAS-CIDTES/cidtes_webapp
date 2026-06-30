@@ -29,13 +29,13 @@ codes: [
 ],
 },
 {
-title: "Energía",
+title: "Energía Renovable(Fotovoltaico)",
 codes: [
 { code: "EC0412", pdf: "/pdf/ESTANDARES/EC0412.pdf" },
-{ code: "EC0413", pdf: "/pdf/ESTANDARES/EC0413.pdf" },
-{ code: "EC0416", pdf: "/pdf/ESTANDARES/EC0416.pdf" },
 { code: "EC0431", pdf: "/pdf/ESTANDARES/EC0431.pdf" },
 { code: "EC0414", pdf: "/pdf/ESTANDARES/EC0414.pdf" },
+{ code: "EC0586.01", pdf: "/pdf/ESTANDARES/EC0586.01.pdf" },
+{ code: "EC1181", pdf: "/pdf/ESTANDARES/EC1181.pdf" },
 ],
 },
 {
@@ -402,4 +402,5 @@ return (
 
 )
 }
+
 
