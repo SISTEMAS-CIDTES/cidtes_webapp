@@ -137,10 +137,8 @@ return (
               El Consejo Nacional de Normalización y Certificación de Competencias Laborales (CONOCER)
             </span>{" "}
             es una entidad paraestatal sectorizada de la Secretaría de Educación Pública (SEP),{" "}
-            <span className="font-bold">
               conformado por un órgano de gobierno tripartita con representantes de los trabajadores, los
               empresarios y el gobierno.
-            </span>
           </p>
         </div>
 
@@ -262,6 +260,7 @@ return (
               email: "enlace@autodinero.com",
               phone: "55 1670 1050 Ext. 1090",
               address: "Calle Pennsylvania #127, Parque San Andrés Coyoacán, C.P. 04040, CDMX",
+              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5758520732106!2d-99.15348902544604!3d19.34420298191641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffd3ff6eceed%3A0x1dc83641b93e05db!2sPennsylvania%20127%2C%20Parque%20San%20Andr%C3%A9s%2C%20Coyoac%C3%A1n%2C%2004040%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1782759308198!5m2!1ses-419!2smx",
             },
             {
               name: "Centro de Evaluación SEVAC",
@@ -270,6 +269,7 @@ return (
               phone: "818 687 5499",
               address: "Guerrero Norte #1003, Col. Centro, C.P.64000, Monterrey, Nuevo León",
               standards: "EC0076, EC0865, EC0664, EC1182, EC1306",
+              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5013.2061751341425!2d-100.31599794052273!3d25.684741112270476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629584f58f6199%3A0x91fcb8373215747e!2sVicente%20Guerrero%201003%2C%20Centro%2C%2064000%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1782759246234!5m2!1ses-419!2smx",
             },
           ].map((center, idx) => (
             <div key={idx}>
@@ -292,31 +292,38 @@ return (
               >
                 <div className="flex gap-4">
                   <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 mb-1 text-sm">{center.name}</h3>
-                    <p className="text-xs text-gray-700 font-semibold mb-3">{center.contact}</p>
+                    <h3 className="font-bold text-gray-900 mb-1 text-base">{center.name}</h3>
+                    <p className="text-base text-gray-700 font-semibold mb-3">{center.contact}</p>
 
                     <div className="space-y-2">
                       <div className="flex items-center gap-3">
                         <Mail size={16} style={{ color: style.accent, flexShrink: 0 }} />
-                        <a href={`mailto:${center.email}`} className="text-xs text-gray-700 hover:underline">
+                        <a href={`mailto:${center.email}`} className="text-sm text-gray-700 hover:underline">
                           {center.email}
                         </a>
                       </div>
 
                       <div className="flex items-center gap-3">
                         <Phone size={16} style={{ color: style.accent, flexShrink: 0 }} />
-                        <span className="text-xs text-gray-700">{center.phone}</span>
+                        <span className="text-sm text-gray-700">{center.phone}</span>
                       </div>
 
                       <div className="flex items-start gap-3">
                         <MapPin size={16} style={{ color: style.accent, marginTop: "2px", flexShrink: 0 }} />
-                        <span className="text-xs text-gray-700">{center.address}</span>
+                        <span className="text-sm text-gray-700">{center.address}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden shadow-md">
-                    <img src="/images/maps.png" alt="Location map" className="w-full h-full object-cover" />
+                  <div className="w-48 h-40 flex-shrink-0 rounded-lg overflow-hidden shadow-md">
+                    <iframe
+                      title={`Mapa de ${center.name}`}
+                      src={center.map}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-full border-0"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
               </div>
@@ -395,3 +402,4 @@ return (
 
 )
 }
+
