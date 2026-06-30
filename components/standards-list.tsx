@@ -15,12 +15,13 @@ interface StandardCategory {
 
 const STANDARDS_CATEGORIES: StandardCategory[] = [
   {
-    title: "Gestión ambiental",
+    title: "Gestión Ambiental Y Sostenibilidad",
     color: "#5DCCCC",
     codes: [
-      { code: "ECO490", pdf: "/pdf/ESTANDARES/EC0490.pdf" },
+      { code: "EC0490", pdf: "/pdf/ESTANDARES/EC0490.pdf" },
       { code: "EC0517", pdf: "/pdf/ESTANDARES/EC0517.pdf" },
       { code: "EC1543", pdf: "/pdf/ESTANDARES/EC1543.pdf" },
+      { code: "EC0391.01", pdf: "/pdf/ESTANDARES/EC0391.01.pdf" },
     ],
     image: "/images/gestion-ambiental.png",
   },
@@ -34,19 +35,9 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
     image: "/images/administracion-contabilidad.png",
   },
   {
-    title: "Manufactura",
-    color: "#5DCCCC",
-    codes: [{ code: "EC0467", pdf: "/pdf/ESTANDARES/EC0467.pdf" }],
-  },
-  {
-    title: "Sustancias químicas",
+    title: "Sustancias Químicas",
     color: "#5DCCCC",
     codes: [{ code: "EC1022", pdf: "/pdf/ESTANDARES/EC1022.pdf" }],
-  },
-  {
-    title: "Fotovoltaico",
-    color: "#5DCCCC",
-    codes: [{ code: "EC0586.01", pdf: "/pdf/ESTANDARES/EC0586.01.pdf" }],
   },
 ]
 
@@ -106,3 +97,4 @@ export default function StandardsList() {
     </div>
   )
 }
+
