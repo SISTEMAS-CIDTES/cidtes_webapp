@@ -122,7 +122,7 @@ export default function HomePage() {
     "14.png"
   ]
 
-  const collaborations = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.png", "8.jpg", "9.webp"]
+  const collaborations = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.png", "8.jpg", "10.webp"]
 
   const repeatedClients = [...clients, ...clients, ...clients]
   const repeatedPartners = [...partners, ...partners, ...partners]
@@ -1002,4 +1002,5 @@ export default function HomePage() {
     </div>
   )
 }
+
 
