@@ -50,11 +50,6 @@ export default function StandardsList() {
           alt="Gestión ambiental"
           className="w-full h-96 object-cover rounded-2xl shadow-xl"
         />
-        <img
-          src="/images/administracion-contabilidad.png"
-          alt="Administración y Contabilidad"
-          className="w-full h-96 object-cover rounded-2xl shadow-xl"
-        />
       </div>
 
       <div className="flex-1 space-y-8 ml-auto">
