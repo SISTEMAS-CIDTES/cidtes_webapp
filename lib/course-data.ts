@@ -32,7 +32,7 @@ export const courseData: Record<string, { title: string; courses: Course[]; head
       { number: "21", name: "Variaciones de voltaje",pdf:"/pdf/ELECTRICIDAD/1.21.pdf" },
       { number: "22", name: "Análisis Transitorio de Capacitores",pdf:"/pdf/ELECTRICIDAD/1.22.pdf" },
       { number: "23", name: "Compensación de potencia reactiva",pdf:"/pdf/ELECTRICIDAD/1.23.pdf"},
-      { number: "24", name: "Corrección de factor de potencia" },
+      { number: "24", name: "Corrección de factor de potencia",pdf:"/pdf/ELECTRICIDAD/1.24.pdf" },
       { number: "25", name: "Puesta a Tierra en Redes Eléctricas",pdf:"/pdf/ELECTRICIDAD/1.25.pdf" },
       { number: "26", name: "Electricidad básica",pdf:"/pdf/ELECTRICIDAD/1.26.pdf" },
       { number: "27", name: "Diagnósticos energéticos",pdf:"/pdf/ELECTRICIDAD/1.27.pdf" },
