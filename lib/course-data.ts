@@ -20,7 +20,7 @@ export const courseData: Record<string, { title: string; courses: Course[]; head
       { number: "9", name: "Eficiencia en Aire Acondicionado y Refrigeración",pdf:"/pdf/ELECTRICIDAD/1.9.pdf"},
       { number: "10", name: "Evaluación de Proyectos de Energía",pdf:"/pdf/ELECTRICIDAD/1.10.pdf"},
       { number: "11", name: "Factor de potencia y demanda" },
-      { number: "12", name: "Generación con Sistemas Fotovoltaicos",pdf:"/pdf/ELECTRICIDAD/1.12.pdf" },
+      { number: "12", name: "Generación Y Ahorro De Energia Con Paneles Fotovoltaicos",pdf:"/pdf/ELECTRICIDAD/1.12.pdf" },
       { number: "13", name: "Gestión de la energía" },
       { number: "14", name: "Introducción a energías limpias",pdf:"/pdf/ELECTRICIDAD/1.14.pdf"},
       { number: "15", name: "Oportunidades de la Reforma Energética" },
@@ -119,4 +119,5 @@ export const courseData: Record<string, { title: string; courses: Course[]; head
     ],
   },
 }
+
 
