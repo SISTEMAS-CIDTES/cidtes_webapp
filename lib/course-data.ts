@@ -113,8 +113,8 @@ export const courseData: Record<string, { title: string; courses: Course[]; head
     title: "Valuación",
     headerColor: "#6B7280",
     courses: [
-      { number: "1", name: "Valuación de alhajas, relojes y joyas" },
-      { number: "2", name: "Valuación de vehículos sin resguardo" },
+      { number: "1", name: "Valuación de alhajas, relojes y joyas",pdf:"/pdf/VALUACION/5.1.pdf"},
+      { number: "2", name: "Valuación de vehículos sin resguardo",pdf:"/pdf/VALUACION/5.2.pdf" },
       { number: "3", name: "Valuación de artículos varios" },
     ],
   },
