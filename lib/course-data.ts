@@ -54,7 +54,7 @@ export const courseData: Record<string, { title: string; courses: Course[]; head
       { number: "3", name: "NOM-005-STPS-1998",pdf:"/pdf/ENERGIA/2.3.pdf" },
       { number: "4", name: "NOM-006-STPS-2014",pdf:"/pdf/ENERGIA/2.4.pdf" },
       { number: "5", name: "NOM-009-STPS-2011",pdf:"/pdf/ENERGIA/2.5.pdf" },
-      { number: "6", name: "NOM-009-STPS-2011",pdf:"/pdf/ENERGIA/2.6.pdf" },
+      { number: "6", name: "NOM-009-STPS-2011",pdf:"/pdf/ENERGIA/2.5.pdf" },
       { number: "7", name: "NOM-017-STPS-2008",pdf:"/pdf/ENERGIA/2.7.pdf" },
       { number: "8", name: "NOM-018-STPS-2015",pdf:"/pdf/ENERGIA/2.8.pdf" },
       { number: "9", name: "NOM-019-STPS-2011",pdf:"/pdf/ENERGIA/2.9.pdf" },
