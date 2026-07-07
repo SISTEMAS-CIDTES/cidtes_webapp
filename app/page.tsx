@@ -16,11 +16,16 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   const carouselImages = [
-    "/images/Image1.1.jpeg",
-    "/images/Image1.2.jpeg",
-    "/images/Image1.3.jpeg",
-    "/images/Image1.4.jpeg",
-    "/images/Image1.5.jpeg",
+    "/images/home/flayers/fotovoltaicos2.jpeg",
+    "/images/home/flayers/sistemas-gestión-energía-2.jpeg",
+    "/images/home/flayers/EC0391-2.jpeg",
+    "/images/home/flayers/EC0397-2.jpeg",
+    "/images/home/flayers/EC0490-2.jpeg",
+    "/images/home/flayers/EC0493-2.jpeg",
+    "/images/home/flayers/EC0517-2.jpeg",
+    "/images/home/flayers/EC0680-2.jpeg",
+    "/images/home/flayers/EC1017-2.jpeg",
+    "/images/home/flayers/EC1018-2.jpeg"
   ]
 
   const commitments = [
@@ -240,7 +245,7 @@ export default function HomePage() {
                   <h2 className="font-medium font-sans leading-9 text-3xl text-white">¿Quiénes somos?</h2>
                 </div>
 
-                <div className="space-y-4 text-gray-800 leading-relaxed ">
+                <div className="text-lg space-y-4 text-gray-800 leading-relaxed ">
                   <p className="font-semibold mx-0 my-0 px-4 sm:px-20 text-justify">
                     Iniciamos operaciones formalmente en 2010 y nuestros expertos cuentan como más de 30 años de
                     experiencia.
@@ -1002,5 +1007,8 @@ export default function HomePage() {
     </div>
   )
 }
+
+
+
 
 
