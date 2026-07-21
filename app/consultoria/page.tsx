@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { NavHeader } from "@/components/nav-header"
@@ -8,45 +9,288 @@ import { NavHeader } from "@/components/nav-header"
 const areasConsultoria = [
   {
     id: 1,
-    title: "Cambio Climático",
-    image: "/images/consultoria/cambio-climatico.png",
-    color: "bg-[#6B46C1]", // Morado
+    title: "Ambiental",
+    image: "/images/consultoria/carbono-emisiones.png",
+    color: "bg-[#6B46C1]",
+    accentColor: "#6B46C1",
+    services: [
+      {
+        title: "Asesoría e implementación de Sistemas de Gestión Ambiental",
+        problematica: [
+          "Contaminación Industrial y Desechos.",
+          "Gestión de Residuos Peligrosos.",
+        ],
+        detalle: [
+          "Definición de alcances y límites.",
+          "Contexto de la organización.",
+          "Elaboración de la política energética de la organización.",
+          "Auditoría energética.",
+          "Instalación del Comité de Energía.",
+          "Línea base (LBEn) e indicadores energéticos (IDEn).",
+          "Construcción del plan de acción de energía.",
+          "Implementación del sistema.",
+          "Campaña de promoción y difusión.",
+          "Diseño de campaña de capacitación.",
+          "Medición y de verificación de desempeño energético.",
+          "Auditoría Interna.",
+        ],
+        beneficios: [
+          "Cumplimiento Legal.",
+          "Reducción de Costos y Eficiencia.",
+          "Mejora de la Reputación.",
+          "Gestión de Riesgos.",
+          "Ventaja Competitiva y Acceso a Mercados.",
+          "Mejora Continua.",
+        ],
+      },
+      {
+        title: "Estudios de vulnerabilidad y adaptación",
+        problematica: [
+          "Impacto de las emisiones de CyGEI a nivel local",
+          "Desconocimiento sobre los riesgos asociados a los impactos del cambio climático en una comunicada, municipio, estado, sector o empresa.",
+        ],
+        detalle: [
+          "Mapeo de los riesgos vinculados a los impactos por el cambio climático en el alcance del objeto de estudio.",
+          "Diagnósticos de vulnerabilidad y adaptación.", 
+          "Diseño de medidas de adaptación especíicas.",
+          "Diseño de MRV para evaluar los beneficios y resultados de las medidas implementadas.",
+        ],
+        beneficios: [
+          "Identificación temprana de los riesgos por el cambio climático.",
+          "Robustecer la resiliencia de las zonas o sectores en estudio.",
+        ],
+      },
+    ],
   },
   {
     id: 2,
     title: "Edificación",
     image: "/images/consultoria/edificacion.png",
-    color: "bg-[#6B46C1]", // Morado
+    color: "bg-[#0891B2]",
+    accentColor: "#0891B2",
+    services: [
+      {
+        title: "Implementación de proyectos de edificación sustentable",
+        problematica: [
+          "Hoy en día las organizaciones gastan importantes recursos económicos para satisfacer las necesidades de energía y de confort e sus edificios, sin embargo no existe una cultura de desarrollo sustentable de la edificación para que de raíz se diseñen edificaciones que reduzcan sus consumos y demandas energéticas a partir de un diseño bioclimático y medidas pasivas.",
+        ],
+        detalle: [
+          "Estudio de implementación de medidas pasivas y ecoeficientes para el mejoramiento del desempeño integral de las edificaciones.",
+          "Implementación de buenas prácticas organizacionales.",
+        ],
+        beneficios: [
+          "Mayores ahorros en consumos energéticos.",
+          "Ahorros económicos en la facturación de los servicios de energía.",
+          "Imagen corporativa sustentable.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 008 (Envolvente Térmica de Edificios No Residenciales)",
+        problematica: [
+          "Edificaciones no residenciales que no cumple con los requisitos normativos para el diseño de la envolvente térmica.",
+          "Altos costos en el acondicionamiento de aire al interior de los edificios.",
+          "Bajo desempeño laboral de los trabajadores debido a un estado de desconfort",
+        ],
+        detalle: [
+          "Estudio de la envolvente térmica de las edificaciones a partir de sus materiales constructivos y diseño original.",
+          "Propuestas de medidas pasivas de implementación para reducir la ganancia de calor en el edificio.",
+          "Reducción estimada del consumo energético necesario para el acondicionamiento de aire.",
+        ],
+        beneficios: [
+          "Reducción de las necesidades de acondicionamiento de aire vía sistemas activos.",
+          "Reducción de la facturación eléctrica de la empresa.",
+          "Mayor confort de los trabajadores que se traduce en el mejoramiento de la productividad.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 020 (Envolvente Térmica de Edificios Residenciales)",
+        problematica: [
+          "Actualmente las familias adquieren viviendas ineficientes energéticamente a un bajo costo que se traducen a través del tiempo en problemas económicos para los ocupantes debido a usos de sistemas de aire acondicionado y calefacción.",
+        ],
+        detalle: [
+          "Estudio de ganancia calórica en el proyecto ejecutivo para la construcción de la vivienda en cuanto a sus materiales constructivos.",
+          "Propuestas de mejora para la envolvente térmica de la vivienda.",
+        ],
+        beneficios: [
+          "Reducción de costos para las familias.",
+          "Mayor calidad de vida en el interior de la vivienda debido a un mayor confort térmico.",
+        ],
+      },
+    ],
   },
   {
     id: 3,
-    title: "Carbono y Emisiones",
-    image: "/images/consultoria/carbono-emisiones.png",
-    color: "bg-[#0891B2]", // Turquesa
+    title: "Sustentabilidad",
+    image: "/images/consultoria/sustentabilidad.png",
+    color: "bg-[#6B46C1]",
+    accentColor: "#6B46C1",
+    services: [
+      {
+        title: "Diseño de estrategias de sustentabilidad",
+        problematica: [
+          "En la actualidad el contar una estrategia de sustentabilidad es una necesidad de toda empresa.",
+          "Transparencia y comunicación, Licencia para operar de las empresas a largo plazo.",
+          "Cuando las empresas reciben fondos internacionales se les solicita cumplir con ciertos estándares de responsabilidad social y sustentabilidad.",
+          "Desconocimiento de los grupos clave que podrían poner en riesgo la estrategia a largo plazo de la empresa.",
+          "Falta de estrategia para medir el desempeño y el impacto de las acciones de sustentabilidad con enfoque de negocio.",
+        ],
+        detalle: [
+          "Diseño de estrategias de sustentabilidad ad-hoc al sector y/o empresa.",
+          "Elaboración y diseño de reportes GRI.",
+          "Implementación de casos de negocio  dependiendo del sector o producto.",
+          "Implementación de estándares de sustentabilidad enfocados a la responsabilidad social como ISO26000 (Guidance on social responsability).",
+          "SA 8000 (Social Accountability International), guías del International Financial Council (IFC*).",
+          "Mapeo estratégico de actores clave y materialidad.",
+          "Diseño de indicadores estratégicos de sustentabilidad.",
+        ],
+        beneficios: [
+          "Asegurar la permanencia de la empresa a largo plazo.",
+          "Mitigar los riesgos por el impacto de la empresa en los ámbitos sociales y ambientales.",
+          "Contar con una estrategia que permita potencializar las inversiones en mitigación de impactos ambientales y sociales.",
+          "Desarrollar una estrategia de sustentabilidad robusta y tejida acorde al negocio.",
+          "Proveer transparencia, integridad y certidumbre a los actores clave vinculados con la cadena de valor de la empresa.",
+          "Robustecer la imagen de la empresa.",
+        ],
+      },
+    ],
   },
   {
     id: 4,
-    title: "Sustentabilidad",
-    image: "/images/consultoria/sustentabilidad.png",
-    color: "bg-[#0891B2]", // Turquesa
+    title: "Energía",
+    image: "/images/consultoria/energia.png",
+    color: "bg-[#0891B2]",
+    accentColor: "#0891B2",
+    services: [
+      {
+        title: "Diagnósticos Energéticos",
+        problematica: [
+          "Altos costos de operación y mantenimiento que impactan negativamente en la productividad.",
+          "Alto consumo energético que contribuye al deterioro del medio ambiente.",
+          "Elevados costos de facturación de electricidad y combustibles.",
+        ],
+        detalle: [
+          "Visita técnica en sitio.",
+          "Entrevistas sobre la operación.",
+          "Mediciones de los sistemas de consumo energético.",
+          "Consolidación y análisis de hallazgos.",
+          "Análisis y cambio de tarifas eléctricas.",
+          "Elaboración de propuestas de ahorro de energía (iluminación, bombeo, aire acondicionado, refrigeración, factor de potencia, motores, etc.)",
+          "Propuesta económica de oportunidades de ahorro.",
+          "Análisis de reducción de dióxido de carbono.",
+          "Elaboración de reporte."
+        ],
+        beneficios: [
+          "Identificación de potenciales de ahorro energético.",
+          "Reducción de consumo energético en instalaciones.",
+          "Propuestas para la reducción de emisiones de dióxido de carbono.",
+          "Acción socialmente responsable.",
+          "Personal calificado en materia de eficiencia energética.",
+          "Conocimiento de los conceptos de la facturación del servicio de energía eléctrica.",
+          "Conocimiento de la eficiencia en la operación de los sistemas de consumo energético.",
+          "Plan de inversión a corto y mediano plazo.",
+        ],
+      },
+      {
+        title: "Asesoría e implementación de Sistemas de Gestión de la Energía ISO 50001",
+        problematica: [
+          "Requisito legal para los Usuarios con Patrón de Alto Consumo Energético (UPAC´s).",
+          "Falta de planeación sobre gestión de la energía en las organizaciones.",
+          "Poco conocimiento sobre el desempeño energético y su impacto en las finanzas de la organización.",
+          "Deficiente selección de indicadores de desempeño energéticos en los sistemas e instalaciones.",
+        ],
+        detalle: [
+          "Definición de alcances y límites.",
+          "Contexto de la organización.",
+          "Elaboración de la política energética de la organización.",
+          "Auditoría energética.",
+          "Instalación del Comité de Energía.",
+          "Línea base (LBEn) e indicadores energéticos (IDEn).",
+          "Construcción del plan de acción de energía.",
+          "Implementación del sistema.",
+          "Campaña de promoción y difusión.",
+          "Diseño de campaña de capacitación.",
+          "Medición y de verificación de desempeño energético.",
+          "Auditoría Interna.",
+        ],
+        beneficios: [
+          "Cumplimiento de las obligaciones gubernamentales.",
+          "Implantar en la organización una cultura integral para el cuidado de la energía y el ambiente.",
+          "Compromiso organizativo.",
+          "Benchmarking energético.",
+          "Reducción de costos.",
+          "Aprovechamiento de recursos financieros y energéticos.",
+          "Proyección de la imagen corporativa.",
+        ],
+      },
+      {
+        title: "Legislación y normatividad energética",
+        problematica: [
+          "Desconocimiento de los riesgos y oportunidades por los cambios en la regulación en el ámbito de energía."
+        ],
+        detalle: [
+          "Diagnóstico de cumplimiento con regulaciones de energía.",
+          "Requisitos y oportunidades de usuarios calificados",
+        ],
+        beneficios: [
+          "Mitigar el riesgo por falta de conocimiento sobre las nuevas regulaciones aplicables.",
+          "Identificación temprana de las oportunidades que se presentarán en el mercado eléctrico.",
+          "Identificar las mejores opciones de agregación para negociar tarifas competitivas con los suministradores.",
+        ],
+      },
+    ],
   },
   {
     id: 5,
-    title: "Energía",
-    image: "/images/consultoria/energia.png",
-    color: "bg-[#0891B2]", // Turquesa
-  },
-  {
-    id: 6,
     title: "Desarrollo social",
     image: "/images/consultoria/desarrollo-social.png",
-    color: "bg-[#6B46C1]", // Morado
+    color: "bg-[#6B46C1]",
+    accentColor: "#6B46C1",
+    services: [
+      {
+        title: "Programa de inclusión infantil para el cuidado ambiental y ahorro de energía",
+        problematica: [
+          "Falta de programas educativos en materia ambiental y de ahorro de energía dirigidos al sector infantil.",
+        ],
+        detalle: [
+          "Plática educativa de los tipos de energía, cómo se genera y su impacto en el medio ambiente.",
+          "Acciones de ahorro de energía eléctrica casa y cuidado del ambiente.",
+          "Aplicación de juegos y dinámicas de reforzamiento.",
+          "Apoyos didácticos a través de personajes amigables que difunden la conciencia ambiental y el ahorro de energía.",
+        ],
+        beneficios: [
+          "Niños con valores ambientales y comprometidos socialmente.",
+          "Promotores del ahorro de energía en la vivienda.",
+          "Efecto multiplicador para reducir el consumo energético a nivel social.",
+          "Formación de recursos humanos para asegurar el desarrollo sustentable.",
+        ],
+      },
+      {
+        title: "Programa de desarrollo de hábitos para el ahorro en el núcleo familiar",
+        problematica: [
+          "Consumos elevados de energía en las viviendas debidos instalaciones ineficientes, problemas de mantenimiento y desconocimientos sobre la facturación que repercuten en la economía de las familias.",
+        ],
+        detalle: [
+          "Pláticas y talleres en donde las familias aprenden la importancia del cuidado de los recursos naturales, conocen su factura eléctrica y algunos tips y medidas prácticas para ahorrar energía eléctrica, agua y gas.",
+        ],
+        beneficios: [
+          "Generación de conciencia sobre el cuidado del ambiente y el ahorro de los recursos naturales.",
+          "Generación de una cultura de ahorro de energía y agua.",
+          "Reducción de costos a partir de acciones sencillas y de bajo o nulo costo.",
+        ],
+      },
+    ],
   },
 ]
 
 export default function ConsultoriaPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [itemsPerView, setItemsPerView] = useState(6)
+  const [selectedArea, setSelectedArea] = useState<
+    (typeof areasConsultoria)[0] | null
+  >(null)
+  const [selectedService, setSelectedService] = useState<
+    (typeof areasConsultoria)[0]["services"][0] | null
+  >(null)
 
   useEffect(() => {
     const handleResize = () => {
@@ -129,7 +373,7 @@ export default function ConsultoriaPage() {
                     laboral con conciencia ambiental y sostenible.
                   </p>
                   <p>
-                    El área de Consultoría <strong className="text-gray-900">generamos</strong> servicios de asesoría y
+                    En el área de Consultoría <strong className="text-gray-900">generamos</strong> servicios de asesoría y
                     auditoría en temas de Seguridad, Salud, Energía, Medio Ambiente y Sustentabilidad.
                   </p>
                 </div>
@@ -176,7 +420,23 @@ export default function ConsultoriaPage() {
                       className="flex-shrink-0 px-2"
                       style={{ width: `${100 / itemsPerView}%` }}
                     >
-                      <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+                      <div
+                        onClick={() => {
+                            if (selectedArea?.id === area.id) {
+                                setSelectedArea(null)
+                                setSelectedService(null)
+                            } else {
+                                setSelectedArea(area)
+                                setSelectedService(null)
+                            }
+                        }}
+                        className={`bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300
+                          ${
+                            selectedArea?.id === area.id
+                              ? "ring-4 ring-[#0891B2]"
+                              : "hover:shadow-xl"
+                          }`}
+                      >
                         {/* Image */}
                         <div className="relative aspect-[2/3] overflow-hidden">
                           <Image
@@ -187,8 +447,15 @@ export default function ConsultoriaPage() {
                           />
                         </div>
                         {/* Title Label */}
-                        <div className={`${area.color} py-4 px-4`}>
-                          <p className="text-white text-center font-semibold text-base">{area.title}</p>
+                        <div
+                          className={`${area.color} py-5 px-4 relative overflow-hidden`}
+                        >
+                          <div className="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full" />
+                          <div className="absolute -left-4 -bottom-8 w-16 h-16 bg-white/10 rounded-full" />
+
+                          <p className="relative z-10 text-white text-center font-bold text-lg tracking-wide">
+                            {area.title}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -227,6 +494,174 @@ export default function ConsultoriaPage() {
                 </button>
               </div>
             </div>
+
+            {selectedArea && (
+              <div
+                className="mt-14 max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-500">
+                <div
+                  className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+                  style={{
+                    borderTop: `8px solid ${selectedArea.accentColor}`,
+                  }}>
+                  <div className="px-6 md:px-10 pt-8 pb-6 text-center">
+                    <span
+                      className="inline-block px-5 py-2 rounded-full text-white text-sm font-bold uppercase tracking-wider shadow-md"
+                      style={{
+                        backgroundColor: selectedArea.accentColor,
+                      }}>
+                      Área de Consultoría
+                    </span>
+                    <h3
+                      className="mt-4 text-3xl md:text-4xl font-extrabold"
+                      style={{
+                        color: selectedArea.accentColor,
+                      }}>
+                      {selectedArea.title}
+                    </h3>
+                    <div
+                      className="mx-auto mt-4 h-1 w-24 rounded-full"
+                      style={{
+                        backgroundColor: selectedArea.accentColor,
+                      }}/>
+                    <p className="mt-4 text-gray-600">
+                      Conoce los servicios que ofrecemos en esta área
+                    </p>
+                  </div>
+
+                  {/* Servicios */}
+                  <div className="px-6 md:px-10 pb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      {selectedArea.services.map((service, index) => (
+                        <button
+                          key={service.title}
+                          onClick={() => setSelectedService(service)}
+                          className={`group relative min-h-[110px] p-5 rounded-2xl
+                            transition-all duration-300 border-2
+                            ${
+                                selectedService?.title === service.title
+                                    ? "text-white shadow-xl scale-105"
+                                    : "bg-gray-50 text-gray-700 hover:-translate-y-2 hover:shadow-xl"
+                            }`}
+                          style={{
+                              backgroundColor:
+                                  selectedService?.title === service.title
+                                      ? selectedArea.accentColor
+                                      : undefined,
+                              borderColor: `${selectedArea.accentColor}40`,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor =
+                              selectedArea.accentColor
+                            e.currentTarget.style.color = "white"
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "#f9fafb"
+                            e.currentTarget.style.color = "#374151"
+                          }}>
+                          <span
+                            className="absolute -top-3 -left-3
+                                      w-8 h-8 rounded-full
+                                      flex items-center justify-center
+                                      text-white font-bold shadow-md"
+                            style={{
+                              backgroundColor: selectedArea.accentColor,
+                            }}>
+                            {index + 1}
+                          </span>
+                          <span className="block pr-2">
+                            {service.title}
+                          </span>
+                          <span
+                            className="absolute right-4 bottom-4
+                                      opacity-0 group-hover:opacity-100
+                                      transition-opacity duration-300">
+                            →
+                          </span>
+                        </button>
+                      ))}
+                    </div>
+
+                    {selectedService && (
+                      <div className="mt-10 overflow-hidden rounded-2xl border shadow-lg">
+                        <div
+                          className="px-6 py-4 text-white"
+                          style={{
+                            backgroundColor: selectedArea.accentColor,
+                          }}>
+                          <h4 className="text-2xl font-bold">
+                            {selectedService.title}
+                          </h4>
+                        </div>
+
+                        <table className="w-full border-collapse">
+                          <tbody>
+                            {/* Problemática */}
+                            <tr className="border-b">
+                              <td
+                                className="w-64 p-5 font-bold text-white align-top"
+                                style={{
+                                  backgroundColor: selectedArea.accentColor,
+                                }}>
+                                Problemática
+                              </td>
+                              <td className="bg-white p-5">
+                                <ul className="space-y-2 list-disc list-inside">
+                                  {selectedService.problematica.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </td>
+                            </tr>
+
+                            {/* Servicios */}
+                            <tr className="border-b">
+                              <td
+                                className="p-5 font-bold text-white align-top"
+                                style={{
+                                  backgroundColor: selectedArea.accentColor,
+                                }}>
+                                Detalle del servicio
+                              </td>
+                              <td className="bg-gray-50 p-5">
+                                <ul className="space-y-2 list-disc list-inside">
+                                  {selectedService.detalle.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </td>
+                            </tr>
+
+                            {/* Beneficios */}
+                            <tr>
+                              <td
+                                className="p-5 font-bold text-white align-top"
+                                style={{
+                                  backgroundColor: selectedArea.accentColor,
+                                }}>
+                                Beneficios
+                              </td>
+                              <td className="bg-white p-5">
+                                <ul className="space-y-2 list-disc list-inside">
+                                  {selectedService.beneficios.map((item) => (
+                                    <li key={item}>{item}</li>
+                                  ))}
+                                </ul>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className="px-6 py-4 text-center text-white text-sm font-medium"
+                    style={{
+                      backgroundColor: selectedArea.accentColor,
+                    }}>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </main>
@@ -259,10 +694,10 @@ export default function ConsultoriaPage() {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#1D63ED] rounded-full mr-3"></div>
                   <a
-                    href="mailto:cidtes@energiaysustentabilidad.org"
+                    href="mailto:contacto@cidtes.org"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    cidtes@energiaysustentabilidad.org
+                    contacto@cidtes.org
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -271,7 +706,7 @@ export default function ConsultoriaPage() {
                     href="tel:+525568125783"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    +52 55 6812-5783
+                    +52 55 6812 5783
                   </a>
                 </div>
               </div>
@@ -304,7 +739,7 @@ export default function ConsultoriaPage() {
               {/* Social Media Links */}
               <div className="flex gap-4">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/cidtes/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -314,7 +749,7 @@ export default function ConsultoriaPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/energiaysustentabilidad.org/?locale=es_LA"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -330,11 +765,11 @@ export default function ConsultoriaPage() {
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93-.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/cidtes_mx/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -343,12 +778,35 @@ export default function ConsultoriaPage() {
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
+                <a
+                  href="https://www.tiktok.com/@cidtesmx "
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.237V2h-3.193v13.766c0 1.57-1.272 2.84-2.84 2.84-1.57 0-2.841-1.27-2.841-2.84 0-1.568 1.271-2.84 2.84-2.84.293 0 .576.045.842.128V9.794a6.032 6.032 0 0 0-.842-.06A6.032 6.032 0 0 0 3.75 15.766 6.032 6.032 0 0 0 9.785 21.8a6.032 6.032 0 0 0 6.034-6.034V8.79a7.98 7.98 0 0 0 4.431 1.341V6.938a4.81 4.81 0 0 1-.661-.252z"/>
+                </svg>
+                </a>
               </div>
 
-              {/* Copyright */}
-              <p className="text-gray-500 text-sm text-center">
-                Copyright 2025 CIDTES Energía y Sustentabilidad. Todos los derechos reservados.
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-700">
+                <span>© 2025 CIDTES Energía y Sustentabilidad.</span>
+                <span>|</span>
+                <span>Todos los derechos reservados.</span>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
+                  Aviso de privacidad
+                </Link>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
+                  Términos y condiciones
+                </Link>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
+                  Legal
+                </Link>
+              </div>
             </div>
           </div>
         </div>
