@@ -30,19 +30,19 @@ codes: [
 ],
 },
 {
-title: "Energía Renovable(Fotovoltaico)",
+title: "Energía (Fotovoltaico)",
 codes: [
 { code: "EC0412", pdf: "/pdf/ESTANDARES/EC0412.pdf" },
 { code: "EC0431", pdf: "/pdf/ESTANDARES/EC0431.pdf" },
 { code: "EC0414", pdf: "/pdf/ESTANDARES/EC0414.pdf" },
-{ code: "EC0586.01", pdf: "/pdf/ESTANDARES/EC0586.01.pdf" },
+{ code: "EC0586.01", pdf: "/pdf/ESTANDARES/EC0586.01.pdf"},
 { code: "EC1181", pdf: "/pdf/ESTANDARES/EC1181.pdf" },
 ],
 },
 {
 title: "S.Salud en el Trabajo",
 codes: [
-{ code: "EC0391", pdf: "/pdf/ESTANDARES/EC0391.pdf" },
+{ code: "EC0391.1", pdf: "/pdf/ESTANDARES/EC0391.1.pdf" },
 { code: "EC0493", pdf: "/pdf/ESTANDARES/EC0493.pdf" },
 { code: "EC0397.01", pdf: "/pdf/ESTANDARES/EC0397.01.pdf" },
 { code: "EC0680", pdf: "/pdf/ESTANDARES/EC0680.pdf" },
