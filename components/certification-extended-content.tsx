@@ -13,18 +13,128 @@ const scrollToContact = () => {
   }
 }
 
+const centros = [
+  {
+    image: "images/impulso.jpeg",
+    nombre: "Impulso Metropolitano Mantenimiento y Servicios Integrales S.A. de C.V.",
+    email : "imv_impulso@yahoo.com.mx",
+    phone: "55 33 82 28 84",
+    standards: "EC0076, EC0248",
+  },
+  {
+    image: "images/uandani.jpeg",
+    nombre: "Centro Ecotecnólogico UANDANI",
+    email : "uandani@gira.org.mx",
+    phone: "43 42 66 40 09",
+    address: "Carretera Pátzcuaro a Erongaricuaro No.28, Col. Tzentzenguaro, Pátzcuaro, Michoacan, 61613",
+  },
+]
+
 export default function CertificationExtendedContent() {
   return (
-    <div className="w-full space-y-16 py-12">
-      
+    <div className="w-full space-y-16 py-12 -mt-24">
+      <div className="w-full max-w-7xl mx-auto space-y-16 py-12 px-4 md:px-8">
+        <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
+          <h2 className="text-4xl font-bold text-[#005BB1] text-center">
+            Centros de Evaluación
+          </h2>
+
+          <div className="space-y-6">
+            {centros.map((centro) => (
+              <div
+                key={centro.nombre}
+                className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-xl shadow-md border-l-4 w-full"
+                style={{
+                  borderColor: "#005BB1",
+                  backgroundColor: "white",
+                }}
+              >
+
+                {/* Imagen */}
+                <div className="w-full sm:w-1/3 md:w-2/5 flex-shrink-0">
+                  <img
+                    src={`/${centro.image}`}
+                    alt={centro.nombre}
+                    className="w-full h-auto max-h-64 object-contain rounded-lg shadow-md"
+                  />
+                </div>
+
+                {/* Información */}
+                <div className="flex-1 min-w-0 space-y-3">
+
+                  <h3 className="text-2xl font-bold text-gray-900 break-words">
+                    {centro.nombre}
+                  </h3>
+
+                  {centro.email && (
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Mail
+                        size={20}
+                        className="flex-shrink-0"
+                        style={{ color: "#005BB1" }}
+                      />
+
+                      <a
+                        href={`mailto:${centro.email}`}
+                        className="hover:underline break-all"
+                      >
+                        {centro.email}
+                      </a>
+                    </div>
+                  )}
+
+                  {centro.phone && (
+                    <div className="flex items-center gap-3 text-gray-700">
+                      <Phone
+                        size={20}
+                        className="flex-shrink-0"
+                        style={{ color: "#005BB1" }}
+                      />
+
+                      <span>{centro.phone}</span>
+                    </div>
+                  )}
+
+                  {centro.address && (
+                    <div className="flex items-start gap-3 text-gray-700">
+                      <MapPin
+                        size={20}
+                        className="flex-shrink-0 mt-1"
+                        style={{ color: "#005BB1" }}
+                      />
+
+                      <span>{centro.address}</span>
+                    </div>
+                  )}
+
+                  {centro.standards && (
+                    <div className="pt-2">
+                      <p className="font-semibold text-[#005BB1]">
+                        Estándares ofertados:
+                      </p>
+
+                      <p className="text-gray-700">
+                        {centro.standards}
+                      </p>
+                    </div>
+                  )}
+
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+
+      </div>
 
       {/* Section: What is CE/EI */}
       <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
         <h2 className="text-4xl font-bold text-[#005BB1] text-center">
-          ¿Qué es un Centro de Evaluación (CE) / Evaluador Independiente (EI)?
+          ¿Quién puede ser un Centro de Evaluación (CE) / Evaluador Independiente (EI)?
         </h2>
         <p className="text-lg text-gray-800 text-center leading-relaxed">
-          Un CE (persona moral pública o privada) o EI (persona física) autorizados por el CONOCER y acreditada por
+          Una persona moral, pública o privada (CE) o persona física (EI) autorizados por el CONOCER y acreditada por
           CIDTES ECE0472-21, para evaluar las competencias de las personas.
         </p>
 
