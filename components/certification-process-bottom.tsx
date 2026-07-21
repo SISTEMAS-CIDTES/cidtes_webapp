@@ -9,7 +9,7 @@ export default function CertificationProcessBottom() {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-12 items-start">
+    <div className="w-full flex flex-col md:flex-row gap-12 items-start -mt-32">
       <div className="flex flex-col gap-8 md:w-5/12 flex-shrink-0">
         <img
           src=""
