@@ -1,6 +1,7 @@
 "use client"
 
 import { Mail, Phone, MapPin, FileText } from "lucide-react"
+import { useState } from "react"
 import StandardsCarousel from "./standards-carousel"
 
 type SectionKey = 0 | 1 | 2 | 3
@@ -89,6 +90,38 @@ return colors[activeSection || 0]
 }
 
 const style = getBackgroundStyle()
+
+const [selectedEvaluator, setSelectedEvaluator] = useState<string | null>(null)
+const evaluadores = [
+  {
+    id: "numael",
+    nombre: "Ing Numael Cruz",
+    email: "ingnumaelcruz@gmail.com",
+    phone: "720 686 0472",
+    address: "Toluca, Queretaro y Guanajuato",
+    standards: "EC0076, EC0217.01, EC0586.01, EC1181",
+  },
+  {
+    id: "ilma",
+    nombre: "Ilma Gama",
+    email: "itgamaf2017@gmail.com",
+    phone: "639 124 3099",
+    address: "Hermosillo, Sonora",
+    standards: "EC0865, EC0664, EC1182, EC0217.01, EC0076",
+  },
+  {
+    id: "cidtes",
+    nombre: "CIDTES",
+    centro: "CIDTES Energía y Sustentabilidad",
+    email: "contacto@cidtes.org",
+    phone: "+52 55 6812 5783",
+    address: "Real de Los Reyes #303, Los Reyes, Alc. Coyoacán, Ciudad de México, C.P. 04330",
+  },
+]
+
+const selectedData = evaluadores.find(
+  (evaluador) => evaluador.id === selectedEvaluator
+)
 
 if (activeSection === null) {
 return (
@@ -332,27 +365,107 @@ return (
         </div>
 
         <div className="flex gap-3 mt-6">
-          <button
-            className="flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
-            style={{ backgroundColor: style.accent }}
-          >
-            Ilma
-          </button>
-
-          <button
-            className="flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
-            style={{ backgroundColor: style.accent }}
-          >
-            José Luis
-          </button>
-
-          <button
-            className="flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105"
-            style={{ backgroundColor: style.accent }}
-          >
-            CIDTES
-          </button>
+          {evaluadores.map((evaluador) => (
+            <button
+              key={evaluador.id}
+              onClick={() =>
+                setSelectedEvaluator(
+                  selectedEvaluator === evaluador.id
+                    ? null
+                    : evaluador.id
+                )
+              }
+              className={`flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105 ${
+                selectedEvaluator === evaluador.id
+                  ? "ring-4 ring-blue-200"
+                  : ""
+              }`}
+              style={{ backgroundColor: style.accent }}
+            >
+              {evaluador.nombre}
+            </button>
+          ))}
         </div>
+
+        {selectedData && (
+          <div className="mt-6">
+            {selectedData.standards && (
+              <p
+                className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
+                style={{ color: style.accent }}
+              >
+                Estándares ofertados: {selectedData.standards}
+              </p>
+            )}
+
+            <div
+              className="border-l-4 px-6 py-5 rounded-xl shadow-md"
+              style={{
+                borderColor: style.borderColor,
+                backgroundColor: "white",
+                borderLeftWidth: "6px",
+              }}
+            >
+              <h3 className="font-bold text-gray-900 mb-1 text-base">
+                {selectedData.centro || "Evaluador independiente"}
+              </h3>
+
+              <p className="text-base text-gray-700 font-semibold mb-3">
+                {selectedData.nombre}
+              </p>
+
+              <div className="space-y-2">
+
+                <div className="flex items-center gap-3">
+                  <Mail
+                    size={16}
+                    style={{
+                      color: style.accent,
+                      flexShrink: 0,
+                    }}
+                  />
+
+                  <a
+                    href={`mailto:${selectedData.email}`}
+                    className="text-sm text-gray-700 hover:underline"
+                  >
+                    {selectedData.email}
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Phone
+                    size={16}
+                    style={{
+                      color: style.accent,
+                      flexShrink: 0,
+                    }}
+                  />
+
+                  <span className="text-sm text-gray-700">
+                    {selectedData.phone}
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <MapPin
+                    size={16}
+                    style={{
+                      color: style.accent,
+                      marginTop: "2px",
+                      flexShrink: 0,
+                    }}
+                  />
+
+                  <span className="text-sm text-gray-700">
+                    {selectedData.address}
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        )}
       </>
     )}
 
