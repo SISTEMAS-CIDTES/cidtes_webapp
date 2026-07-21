@@ -21,7 +21,6 @@ const STANDARDS_CATEGORIES: StandardCategory[] = [
       { code: "EC0490", pdf: "/pdf/ESTANDARES/EC0490.pdf" },
       { code: "EC0517", pdf: "/pdf/ESTANDARES/EC0517.pdf" },
       { code: "EC1543", pdf: "/pdf/ESTANDARES/EC1543.pdf" },
-      { code: "EC0391.01", pdf: "/pdf/ESTANDARES/EC0391.01.pdf" },
     ],
     image: "/images/gestion-ambiental.png",
   },
