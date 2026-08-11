@@ -16,16 +16,16 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   const carouselImages = [
-    "/images/home/flayers/fotovoltaicos2.jpeg",
-    "/images/home/flayers/sistemas-gestión-energía-2.jpeg",
-    "/images/home/flayers/EC0391-2.jpeg",
-    "/images/home/flayers/EC0397-2.jpeg",
-    "/images/home/flayers/EC0490-2.jpeg",
-    "/images/home/flayers/EC0493-2.jpeg",
-    "/images/home/flayers/EC0517-2.jpeg",
-    "/images/home/flayers/EC0680-2.jpeg",
-    "/images/home/flayers/EC1017-2.jpeg",
-    "/images/home/flayers/EC1018-2.jpeg"
+    "/images/home/flayers/sostenibilidad.jpeg",
+    "/images/home/flayers/sistemas-gestión-energía-3.jpeg",
+    "/images/home/flayers/EC0391-3.jpeg",
+    "/images/home/flayers/EC0397-3.jpeg",
+    "/images/home/flayers/EC0490-3.jpeg",
+    "/images/home/flayers/EC0493-3.jpeg",
+    "/images/home/flayers/EC0517-3.jpeg",
+    "/images/home/flayers/EC0680-3.jpeg",
+    "/images/home/flayers/EC1017-1.jpeg",
+    "/images/home/flayers/EC1018-3.jpeg"
   ]
 
   const commitments = [
@@ -261,8 +261,8 @@ export default function HomePage() {
               </div>
 
               {/* Right Content - Carousel */}
-              <div className="relative">
-                <div className="relative w-full h-[500px] object-contain rounded-lg">
+              <div className="relative w-full">
+                <div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden">
                   {carouselImages.map((image, index) => (
                     <div
                       key={index}
@@ -284,13 +284,14 @@ export default function HomePage() {
                 </div>
 
                 {/* Carousel Indicators */}
-                <div className="flex justify-center mt-4 space-x-2">
+                <div className="flex justify-center mt-2 space-x-2">
                   {carouselImages.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? "bg-blue-600" : "bg-gray-300"
-                        }`}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        index === currentSlide ? "bg-blue-600" : "bg-gray-300"
+                      }`}
                     />
                   ))}
                 </div>
@@ -1007,8 +1008,3 @@ export default function HomePage() {
     </div>
   )
 }
-
-
-
-
-
