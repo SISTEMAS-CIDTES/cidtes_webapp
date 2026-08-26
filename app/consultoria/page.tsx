@@ -9,157 +9,17 @@ import { NavHeader } from "@/components/nav-header"
 const areasConsultoria = [
   {
     id: 1,
-    title: "Ambiental",
-    image: "/images/consultoria/carbono-emisiones.png",
-    color: "bg-[#6B46C1]",
-    accentColor: "#6B46C1",
-    services: [
-      {
-        title: "Asesoría e implementación de Sistemas de Gestión Ambiental",
-        problematica: [
-          "Contaminación Industrial y Desechos.",
-          "Gestión de Residuos Peligrosos.",
-        ],
-        detalle: [
-          "Definición de alcances y límites.",
-          "Contexto de la organización.",
-          "Elaboración de la política energética de la organización.",
-          "Auditoría energética.",
-          "Instalación del Comité de Energía.",
-          "Línea base (LBEn) e indicadores energéticos (IDEn).",
-          "Construcción del plan de acción de energía.",
-          "Implementación del sistema.",
-          "Campaña de promoción y difusión.",
-          "Diseño de campaña de capacitación.",
-          "Medición y de verificación de desempeño energético.",
-          "Auditoría Interna.",
-        ],
-        beneficios: [
-          "Cumplimiento Legal.",
-          "Reducción de Costos y Eficiencia.",
-          "Mejora de la Reputación.",
-          "Gestión de Riesgos.",
-          "Ventaja Competitiva y Acceso a Mercados.",
-          "Mejora Continua.",
-        ],
-      },
-      {
-        title: "Estudios de vulnerabilidad y adaptación",
-        problematica: [
-          "Impacto de las emisiones de CyGEI a nivel local",
-          "Desconocimiento sobre los riesgos asociados a los impactos del cambio climático en una comunicada, municipio, estado, sector o empresa.",
-        ],
-        detalle: [
-          "Mapeo de los riesgos vinculados a los impactos por el cambio climático en el alcance del objeto de estudio.",
-          "Diagnósticos de vulnerabilidad y adaptación.", 
-          "Diseño de medidas de adaptación especíicas.",
-          "Diseño de MRV para evaluar los beneficios y resultados de las medidas implementadas.",
-        ],
-        beneficios: [
-          "Identificación temprana de los riesgos por el cambio climático.",
-          "Robustecer la resiliencia de las zonas o sectores en estudio.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Edificación",
-    image: "/images/consultoria/edificacion.png",
-    color: "bg-[#0891B2]",
-    accentColor: "#0891B2",
-    services: [
-      {
-        title: "Implementación de proyectos de edificación sustentable",
-        problematica: [
-          "Hoy en día las organizaciones gastan importantes recursos económicos para satisfacer las necesidades de energía y de confort e sus edificios, sin embargo no existe una cultura de desarrollo sustentable de la edificación para que de raíz se diseñen edificaciones que reduzcan sus consumos y demandas energéticas a partir de un diseño bioclimático y medidas pasivas.",
-        ],
-        detalle: [
-          "Estudio de implementación de medidas pasivas y ecoeficientes para el mejoramiento del desempeño integral de las edificaciones.",
-          "Implementación de buenas prácticas organizacionales.",
-        ],
-        beneficios: [
-          "Mayores ahorros en consumos energéticos.",
-          "Ahorros económicos en la facturación de los servicios de energía.",
-          "Imagen corporativa sustentable.",
-        ],
-      },
-      {
-        title: "Evaluación de la NOM 008 (Envolvente Térmica de Edificios No Residenciales)",
-        problematica: [
-          "Edificaciones no residenciales que no cumple con los requisitos normativos para el diseño de la envolvente térmica.",
-          "Altos costos en el acondicionamiento de aire al interior de los edificios.",
-          "Bajo desempeño laboral de los trabajadores debido a un estado de desconfort",
-        ],
-        detalle: [
-          "Estudio de la envolvente térmica de las edificaciones a partir de sus materiales constructivos y diseño original.",
-          "Propuestas de medidas pasivas de implementación para reducir la ganancia de calor en el edificio.",
-          "Reducción estimada del consumo energético necesario para el acondicionamiento de aire.",
-        ],
-        beneficios: [
-          "Reducción de las necesidades de acondicionamiento de aire vía sistemas activos.",
-          "Reducción de la facturación eléctrica de la empresa.",
-          "Mayor confort de los trabajadores que se traduce en el mejoramiento de la productividad.",
-        ],
-      },
-      {
-        title: "Evaluación de la NOM 020 (Envolvente Térmica de Edificios Residenciales)",
-        problematica: [
-          "Actualmente las familias adquieren viviendas ineficientes energéticamente a un bajo costo que se traducen a través del tiempo en problemas económicos para los ocupantes debido a usos de sistemas de aire acondicionado y calefacción.",
-        ],
-        detalle: [
-          "Estudio de ganancia calórica en el proyecto ejecutivo para la construcción de la vivienda en cuanto a sus materiales constructivos.",
-          "Propuestas de mejora para la envolvente térmica de la vivienda.",
-        ],
-        beneficios: [
-          "Reducción de costos para las familias.",
-          "Mayor calidad de vida en el interior de la vivienda debido a un mayor confort térmico.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Sustentabilidad",
-    image: "/images/consultoria/sustentabilidad.png",
-    color: "bg-[#6B46C1]",
-    accentColor: "#6B46C1",
-    services: [
-      {
-        title: "Diseño de estrategias de sustentabilidad",
-        problematica: [
-          "En la actualidad el contar una estrategia de sustentabilidad es una necesidad de toda empresa.",
-          "Transparencia y comunicación, Licencia para operar de las empresas a largo plazo.",
-          "Cuando las empresas reciben fondos internacionales se les solicita cumplir con ciertos estándares de responsabilidad social y sustentabilidad.",
-          "Desconocimiento de los grupos clave que podrían poner en riesgo la estrategia a largo plazo de la empresa.",
-          "Falta de estrategia para medir el desempeño y el impacto de las acciones de sustentabilidad con enfoque de negocio.",
-        ],
-        detalle: [
-          "Diseño de estrategias de sustentabilidad ad-hoc al sector y/o empresa.",
-          "Elaboración y diseño de reportes GRI.",
-          "Implementación de casos de negocio  dependiendo del sector o producto.",
-          "Implementación de estándares de sustentabilidad enfocados a la responsabilidad social como ISO26000 (Guidance on social responsability).",
-          "SA 8000 (Social Accountability International), guías del International Financial Council (IFC*).",
-          "Mapeo estratégico de actores clave y materialidad.",
-          "Diseño de indicadores estratégicos de sustentabilidad.",
-        ],
-        beneficios: [
-          "Asegurar la permanencia de la empresa a largo plazo.",
-          "Mitigar los riesgos por el impacto de la empresa en los ámbitos sociales y ambientales.",
-          "Contar con una estrategia que permita potencializar las inversiones en mitigación de impactos ambientales y sociales.",
-          "Desarrollar una estrategia de sustentabilidad robusta y tejida acorde al negocio.",
-          "Proveer transparencia, integridad y certidumbre a los actores clave vinculados con la cadena de valor de la empresa.",
-          "Robustecer la imagen de la empresa.",
-        ],
-      },
-    ],
-  },
-  {
-    id: 4,
     title: "Energía",
     image: "/images/consultoria/energia.png",
-    color: "bg-[#0891B2]",
-    accentColor: "#0891B2",
+    color: "bg-[#009FE3]",
+    accentColor: "#009FE3",
+    darkColor: "#0078AD", //titulo
+    mediumColor: "#009FE3", //problematica
+    lightColor: "#45B5E8", //detalle del servicio
+    lighterColor: "#9ADAF2", //beneficios
+    problematicaTextColor:"#D9F3FC",
+    detailTextColor: "#005B83",
+    benefitsTextColor: "#00445F",
     services: [
       {
         title: "Diagnósticos Energéticos",
@@ -240,11 +100,157 @@ const areasConsultoria = [
     ],
   },
   {
+    id: 2,
+    title: "Seguridad y Salud en el Trabajo",
+    image: "/images/consultoria/energia.png",
+    color: "bg-[#0052A1]",
+    accentColor: "#0052A1",
+    darkColor: "#003B75", //titulo
+    mediumColor: "#0052A1", //problematica
+    lightColor: "#407BB8", //detalle del servicio
+    lighterColor: "#8FB1D4", //beneficios
+    problematicaTextColor:"#DCEEFF",
+    detailTextColor: "#003B75",
+    benefitsTextColor: "#002B55",
+    services: [
+      {
+        title: "Implementación del Programa de Autogestión en Seguridad y Salud en el Trabajo (PASST)",
+        problematica: [
+          "Altas tasas de accidentes",
+        ],
+        detalle: [
+          "Identificación de normas aplicables al giro de la empresa",
+          "Instauración del sistema de administración en SyST",
+          "Evaluación del sistema de SyST",
+          "Evaluación de cumplimiento normativo",
+          "Esquema de autoevaluación",
+          "Matriz de riesgos",
+        ],
+        beneficios: [
+          "Distintivo de empresa segura",
+          "Reducir riesgos de accidentes o laborales",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Ambiental",
+    image: "/images/consultoria/carbono-emisiones.png",
+    color: "bg-[#00AEA5]",
+    accentColor: "#00AEA5",
+    darkColor: "#00877F", //titulo
+    mediumColor: "#00AEA5", //problematica
+    lightColor: "#4CC7C0", //detalle del servicio
+    lighterColor: "#99DFDB", //beneficios
+    problematicaTextColor:"#D9F7F4",
+    detailTextColor: "#006F69",
+    benefitsTextColor: "#00524E",
+    services: [
+      {
+        title: "Asesoría e implementación de Sistemas de Gestión Ambiental",
+        problematica: [
+          "Contaminación Industrial y Desechos.",
+          "Gestión de Residuos Peligrosos.",
+        ],
+        detalle: [
+          "Definición de alcances y límites.",
+          "Contexto de la organización.",
+          "Elaboración de la política energética de la organización.",
+          "Auditoría energética.",
+          "Instalación del Comité de Energía.",
+          "Línea base (LBEn) e indicadores energéticos (IDEn).",
+          "Construcción del plan de acción de energía.",
+          "Implementación del sistema.",
+          "Campaña de promoción y difusión.",
+          "Diseño de campaña de capacitación.",
+          "Medición y de verificación de desempeño energético.",
+          "Auditoría Interna.",
+        ],
+        beneficios: [
+          "Cumplimiento Legal.",
+          "Reducción de Costos y Eficiencia.",
+          "Mejora de la Reputación.",
+          "Gestión de Riesgos.",
+          "Ventaja Competitiva y Acceso a Mercados.",
+          "Mejora Continua.",
+        ],
+      },
+      {
+        title: "Estudios de vulnerabilidad y adaptación",
+        problematica: [
+          "Impacto de las emisiones de CyGEI a nivel local",
+          "Desconocimiento sobre los riesgos asociados a los impactos del cambio climático en una comunicada, municipio, estado, sector o empresa.",
+        ],
+        detalle: [
+          "Mapeo de los riesgos vinculados a los impactos por el cambio climático en el alcance del objeto de estudio.",
+          "Diagnósticos de vulnerabilidad y adaptación.", 
+          "Diseño de medidas de adaptación especíicas.",
+          "Diseño de MRV para evaluar los beneficios y resultados de las medidas implementadas.",
+        ],
+        beneficios: [
+          "Identificación temprana de los riesgos por el cambio climático.",
+          "Robustecer la resiliencia de las zonas o sectores en estudio.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Sostentabilidad",
+    image: "/images/consultoria/sustentabilidad.png",
+    color: "bg-[#702283]",
+    accentColor: "#702283",
+    darkColor: "#531865", //titulo
+    mediumColor: "#702283", //problematica
+    lightColor: "#9560A1", //detalle del servicio
+    lighterColor: "#C4A5CB", //beneficios
+    problematicaTextColor:"#F0DDF4",
+    detailTextColor: "#5A176A",
+    benefitsTextColor: "#43114F",
+    services: [
+      {
+        title: "Diseño de estrategias de sustentabilidad",
+        problematica: [
+          "En la actualidad el contar una estrategia de sustentabilidad es una necesidad de toda empresa.",
+          "Transparencia y comunicación, Licencia para operar de las empresas a largo plazo.",
+          "Cuando las empresas reciben fondos internacionales se les solicita cumplir con ciertos estándares de responsabilidad social y sustentabilidad.",
+          "Desconocimiento de los grupos clave que podrían poner en riesgo la estrategia a largo plazo de la empresa.",
+          "Falta de estrategia para medir el desempeño y el impacto de las acciones de sustentabilidad con enfoque de negocio.",
+        ],
+        detalle: [
+          "Diseño de estrategias de sustentabilidad ad-hoc al sector y/o empresa.",
+          "Elaboración y diseño de reportes GRI.",
+          "Implementación de casos de negocio  dependiendo del sector o producto.",
+          "Implementación de estándares de sustentabilidad enfocados a la responsabilidad social como ISO26000 (Guidance on social responsability).",
+          "SA 8000 (Social Accountability International), guías del International Financial Council (IFC*).",
+          "Mapeo estratégico de actores clave y materialidad.",
+          "Diseño de indicadores estratégicos de sustentabilidad.",
+        ],
+        beneficios: [
+          "Asegurar la permanencia de la empresa a largo plazo.",
+          "Mitigar los riesgos por el impacto de la empresa en los ámbitos sociales y ambientales.",
+          "Contar con una estrategia que permita potencializar las inversiones en mitigación de impactos ambientales y sociales.",
+          "Desarrollar una estrategia de sustentabilidad robusta y tejida acorde al negocio.",
+          "Proveer transparencia, integridad y certidumbre a los actores clave vinculados con la cadena de valor de la empresa.",
+          "Robustecer la imagen de la empresa.",
+        ],
+      },
+    ],
+  },
+  {
     id: 5,
-    title: "Desarrollo social",
+    title: "Desarrollo Empresarial",
     image: "/images/consultoria/desarrollo-social.png",
-    color: "bg-[#6B46C1]",
-    accentColor: "#6B46C1",
+    color: "bg-[#009647]",
+    accentColor: "#009647",
+    darkColor: "#006E35", //titulo
+    mediumColor: "#009647", //problematica
+    lightColor: "#45B66F", //detalle del servicio
+    lighterColor: "#8AD39F", //beneficios
+    problematicaTextColor:"#DDF5E7",
+    detailTextColor: "#00662F",
+    benefitsTextColor: "#004A22",
     services: [
       {
         title: "Programa de inclusión infantil para el cuidado ambiental y ahorro de energía",
@@ -276,6 +282,69 @@ const areasConsultoria = [
           "Generación de conciencia sobre el cuidado del ambiente y el ahorro de los recursos naturales.",
           "Generación de una cultura de ahorro de energía y agua.",
           "Reducción de costos a partir de acciones sencillas y de bajo o nulo costo.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Edificación",
+    image: "/images/consultoria/edificacion.png",
+    color: "bg-[#7868A8]",
+    accentColor: "#7868A8",
+    darkColor: "#5A4A86", //titulo
+    mediumColor: "#7868A8", //problematica
+    lightColor: "#9B8DC0", //detalle del servicio
+    lighterColor: "#C0B8D8", //beneficios
+    problematicaTextColor:"#EEEAF7",
+    detailTextColor: "#5A4A86",
+    benefitsTextColor: "#46386B",
+    services: [
+      {
+        title: "Implementación de proyectos de edificación sustentable",
+        problematica: [
+          "Hoy en día las organizaciones gastan importantes recursos económicos para satisfacer las necesidades de energía y de confort e sus edificios, sin embargo no existe una cultura de desarrollo sustentable de la edificación para que de raíz se diseñen edificaciones que reduzcan sus consumos y demandas energéticas a partir de un diseño bioclimático y medidas pasivas.",
+        ],
+        detalle: [
+          "Estudio de implementación de medidas pasivas y ecoeficientes para el mejoramiento del desempeño integral de las edificaciones.",
+          "Implementación de buenas prácticas organizacionales.",
+        ],
+        beneficios: [
+          "Mayores ahorros en consumos energéticos.",
+          "Ahorros económicos en la facturación de los servicios de energía.",
+          "Imagen corporativa sustentable.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 008 (Envolvente Térmica de Edificios No Residenciales)",
+        problematica: [
+          "Edificaciones no residenciales que no cumple con los requisitos normativos para el diseño de la envolvente térmica.",
+          "Altos costos en el acondicionamiento de aire al interior de los edificios.",
+          "Bajo desempeño laboral de los trabajadores debido a un estado de desconfort",
+        ],
+        detalle: [
+          "Estudio de la envolvente térmica de las edificaciones a partir de sus materiales constructivos y diseño original.",
+          "Propuestas de medidas pasivas de implementación para reducir la ganancia de calor en el edificio.",
+          "Reducción estimada del consumo energético necesario para el acondicionamiento de aire.",
+        ],
+        beneficios: [
+          "Reducción de las necesidades de acondicionamiento de aire vía sistemas activos.",
+          "Reducción de la facturación eléctrica de la empresa.",
+          "Mayor confort de los trabajadores que se traduce en el mejoramiento de la productividad.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 020 (Envolvente Térmica de Edificios Residenciales)",
+        problematica: [
+          "Actualmente las familias adquieren viviendas ineficientes energéticamente a un bajo costo que se traducen a través del tiempo en problemas económicos para los ocupantes debido a usos de sistemas de aire acondicionado y calefacción.",
+        ],
+        detalle: [
+          "Estudio de ganancia calórica en el proyecto ejecutivo para la construcción de la vivienda en cuanto a sus materiales constructivos.",
+          "Propuestas de mejora para la envolvente térmica de la vivienda.",
+        ],
+        beneficios: [
+          "Reducción de costos para las familias.",
+          "Mayor calidad de vida en el interior de la vivienda debido a un mayor confort térmico.",
         ],
       },
     ],
@@ -448,12 +517,12 @@ export default function ConsultoriaPage() {
                         </div>
                         {/* Title Label */}
                         <div
-                          className={`${area.color} py-5 px-4 relative overflow-hidden`}
+                          className={`${area.color} h-24 px-4 relative overflow-hidden flex items-center justify-center`}
                         >
                           <div className="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full" />
                           <div className="absolute -left-4 -bottom-8 w-16 h-16 bg-white/10 rounded-full" />
 
-                          <p className="relative z-10 text-white text-center font-bold text-lg tracking-wide">
+                          <p className="relative z-10 text-white text-center font-bold text-lg leading-tight tracking-wide">
                             {area.title}
                           </p>
                         </div>
@@ -586,7 +655,7 @@ export default function ConsultoriaPage() {
                         <div
                           className="px-6 py-4 text-white"
                           style={{
-                            backgroundColor: selectedArea.accentColor,
+                            backgroundColor: selectedArea.darkColor,
                           }}>
                           <h4 className="text-2xl font-bold">
                             {selectedService.title}
@@ -600,52 +669,67 @@ export default function ConsultoriaPage() {
                               <td
                                 className="w-64 p-5 font-bold text-white align-top"
                                 style={{
-                                  backgroundColor: selectedArea.accentColor,
-                                }}>
+                                  backgroundColor: selectedArea.mediumColor,
+                                  color: selectedArea.problematicaTextColor,
+                                }}
+                              >
                                 Problemática
                               </td>
+
                               <td className="bg-white p-5">
-                                <ul className="space-y-2 list-disc list-inside">
-                                  {selectedService.problematica.map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.problematica.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
                               </td>
                             </tr>
 
-                            {/* Servicios */}
+                            {/* Detalle del servicio */}
                             <tr className="border-b">
                               <td
-                                className="p-5 font-bold text-white align-top"
+                                className="w-64 p-5 font-bold align-top"
                                 style={{
-                                  backgroundColor: selectedArea.accentColor,
-                                }}>
+                                  backgroundColor: selectedArea.lightColor,
+                                  color: selectedArea.detailTextColor,
+                                }}
+                              >
                                 Detalle del servicio
                               </td>
+
                               <td className="bg-gray-50 p-5">
-                                <ul className="space-y-2 list-disc list-inside">
-                                  {selectedService.detalle.map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.detalle.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
                               </td>
                             </tr>
 
                             {/* Beneficios */}
                             <tr>
                               <td
-                                className="p-5 font-bold text-white align-top"
+                                className="p-5 font-bold align-top"
                                 style={{
-                                  backgroundColor: selectedArea.accentColor,
-                                }}>
+                                  backgroundColor: selectedArea.lighterColor,
+                                  color: selectedArea.benefitsTextColor,
+                                }}
+                              >
                                 Beneficios
                               </td>
+
                               <td className="bg-white p-5">
-                                <ul className="space-y-2 list-disc list-inside">
-                                  {selectedService.beneficios.map((item) => (
-                                    <li key={item}>{item}</li>
-                                  ))}
-                                </ul>
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.beneficios.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
                               </td>
                             </tr>
                           </tbody>
