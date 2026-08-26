@@ -30,7 +30,7 @@ codes: [
 ],
 },
 {
-title: "Energía (Fotovoltaico)",
+title: "Energía",
 codes: [
 { code: "EC0412", pdf: "/pdf/ESTANDARES/EC0412.pdf" },
 { code: "EC0431", pdf: "/pdf/ESTANDARES/EC0431.pdf" },
