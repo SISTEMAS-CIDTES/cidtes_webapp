@@ -102,7 +102,7 @@ const areasConsultoria = [
   {
     id: 2,
     title: "Seguridad y Salud en el Trabajo",
-    image: "/images/consultoria/energia.png",
+    image: "/images/consultoria/Seguridad.png",
     color: "bg-[#0052A1]",
     accentColor: "#0052A1",
     darkColor: "#003B75", //titulo
@@ -289,7 +289,7 @@ const areasConsultoria = [
   {
     id: 6,
     title: "Edificación",
-    image: "/images/consultoria/edificacion.png",
+    image: "/images/consultoria/Edificacion.png",
     color: "bg-[#7868A8]",
     accentColor: "#7868A8",
     darkColor: "#5A4A86", //titulo
