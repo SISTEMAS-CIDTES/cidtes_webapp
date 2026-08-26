@@ -1,29 +1,30 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { NavHeader } from "@/components/nav-header"
 
 const odsItems = [
-  { id: 1, image: "/images/ods/ods-01.png", alt: "01 No Poverty" },
-  { id: 2, image: "/images/ods/ods-02.png", alt: "02 Zero Hunger" },
-  { id: 3, image: "/images/ods/ods-03.png", alt: "03 Good Health & Well-Being" },
-  { id: 4, image: "/images/ods/ods-04.png", alt: "04 Quality Education" },
-  { id: 5, image: "/images/ods/ods-05.png", alt: "05 Gender Equality" },
-  { id: 6, image: "/images/ods/ods-06.png", alt: "06 Clean Water and Sanitation" },
-  { id: 7, image: "/images/ods/ods-07.png", alt: "07 Affordable and Clean Energy" },
-  { id: 8, image: "/images/ods/ods-08.png", alt: "08 Decent Work and Economic Growth" },
-  { id: 9, image: "/images/ods/ods-09.png", alt: "09 Industry, Innovation and Infrastructure" },
-  { id: 10, image: "/images/ods/ods-10.png", alt: "10 Reduced Inequalities" },
-  { id: 11, image: "/images/ods/ods-11.png", alt: "11 Sustainable Cities and Communities" },
-  { id: 12, image: "/images/ods/ods-12.png", alt: "12 Responsible Consumption and Production" },
-  { id: 13, image: "/images/ods/ods-13.png", alt: "13 Climate Action" },
-  { id: 14, image: "/images/ods/ods-14.png", alt: "14 Life Below Water" },
-  { id: 15, image: "/images/ods/ods-15.png", alt: "15 Life on Land" },
-  { id: 16, image: "/images/ods/ods-16.png", alt: "16 Peace, Justice and Strong Institutions" },
-  { id: 17, image: "/images/ods/ods-17.png", alt: "17 Partnerships for the Goals" },
-]
+  { id: 1, image: "/images/ods/ods-español/1.png", alt: "01 Fin de la pobreza" },
+  { id: 2, image: "/images/ods/ods-español/2.png", alt: "02 Hambre cero" },
+  { id: 3, image: "/images/ods/ods-español/3.png", alt: "03 Salud y bienestar" },
+  { id: 4, image: "/images/ods/ods-español/4.png", alt: "04 Educación de calidad" },
+  { id: 5, image: "/images/ods/ods-español/5.png", alt: "05 Igualdad de género" },
+  { id: 6, image: "/images/ods/ods-español/6.png", alt: "06 Agua limpia y saneamiento" },
+  { id: 7, image: "/images/ods/ods-español/7.png", alt: "07 Energía asequible y no contaminante" },
+  { id: 8, image: "/images/ods/ods-español/8.png", alt: "08 Trabajo decente y crecimiento económico" },
+  { id: 9, image: "/images/ods/ods-español/9.png", alt: "09 Industria, innovación e infraestructura" },
+  { id: 10, image: "/images/ods/ods-español/10.png", alt: "10 Reducción de las desigualdades" },
+  { id: 11, image: "/images/ods/ods-español/11.png", alt: "11 Ciudades y comunidades sostenibles" },
+  { id: 12, image: "/images/ods/ods-español/12.png", alt: "12 Producción y consumo responsables" },
+  { id: 13, image: "/images/ods/ods-español/13.png", alt: "13 Acción por el clima" },
+  { id: 14, image: "/images/ods/ods-español/14.png", alt: "14 Vida submarina" },
+  { id: 15, image: "/images/ods/ods-español/15.png", alt: "15 Vida de ecosistemas terrestres" },
+  { id: 16, image: "/images/ods/ods-español/16.png", alt: "16 Paz, justicia e instituciones sólidas" },
+  { id: 17, image: "/images/ods/ods-español/17.png", alt: "17 Alianzas para lograr los objetivos" },
+];
 
 export default function InvestigacionConsultoriaPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -877,10 +878,10 @@ export default function InvestigacionConsultoriaPage() {
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-[#1D63ED] rounded-full mr-3"></div>
                   <a
-                    href="mailto:cidtes@energiaysustentabilidad.org"
+                    href="mailto:contacto@cidtes.org"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    cidtes@energiaysustentabilidad.org
+                    contacto@cidtes.org
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -889,7 +890,7 @@ export default function InvestigacionConsultoriaPage() {
                     href="tel:+525568125783"
                     className="text-gray-800 hover:text-[#1D63ED] transition-colors duration-300"
                   >
-                    +52 55 6812-5783
+                    +52 55 6812 5783
                   </a>
                 </div>
               </div>
@@ -922,7 +923,7 @@ export default function InvestigacionConsultoriaPage() {
               {/* Social Media Links */}
               <div className="flex gap-4">
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/company/cidtes/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -932,7 +933,7 @@ export default function InvestigacionConsultoriaPage() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/energiaysustentabilidad.org/?locale=es_LA"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -948,11 +949,11 @@ export default function InvestigacionConsultoriaPage() {
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93-.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/cidtes_mx/"
                   target="_blank"
                   rel="noreferrer"
                   className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
@@ -961,12 +962,35 @@ export default function InvestigacionConsultoriaPage() {
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </a>
+                <a
+                  href="https://www.tiktok.com/@cidtesmx "
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-10 h-10 bg-[#1D63ED] rounded-full flex items-center justify-center text-white hover:bg-[#0E4BB8] transition-all duration-300 hover:scale-110"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.237V2h-3.193v13.766c0 1.57-1.272 2.84-2.84 2.84-1.57 0-2.841-1.27-2.841-2.84 0-1.568 1.271-2.84 2.84-2.84.293 0 .576.045.842.128V9.794a6.032 6.032 0 0 0-.842-.06A6.032 6.032 0 0 0 3.75 15.766 6.032 6.032 0 0 0 9.785 21.8a6.032 6.032 0 0 0 6.034-6.034V8.79a7.98 7.98 0 0 0 4.431 1.341V6.938a4.81 4.81 0 0 1-.661-.252z"/>
+                </svg>
+                </a>
               </div>
 
-              {/* Copyright */}
-              <p className="text-gray-500 text-sm text-center">
-                Copyright 2025 CIDTES Energía y Sustentabilidad. Todos los derechos reservados.
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-gray-700">
+                <span>© 2025 CIDTES Energía y Sustentabilidad.</span>
+                <span>|</span>
+                <span>Todos los derechos reservados.</span>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">https://translate.google.com/
+                  Aviso de privacidad
+                </Link>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
+                  Términos y condiciones
+                </Link>
+                <span>|</span>
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
+                  Legal
+                </Link>
+              </div>
             </div>
           </div>
         </div>
