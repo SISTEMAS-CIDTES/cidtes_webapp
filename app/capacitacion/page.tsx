@@ -72,18 +72,6 @@ export default function CapacitacionPage() {
                   <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales y las respaldamos a través de:</p>
                 </div>
               </div>
-                {/* Imagen de respaldos */}
-  <div className="w-full flex justify-center lg:justify-start pt-2">
-    <Image
-      src="/images/capacitacion/respaldamos.png"
-      alt="Respaldamos nuestras capacitaciones"
-      width={660}
-      height={916}
-      className="w-full max-w-[500px] h-auto object-contain"
-      priority
-    />
-  </div>
-</div>
           
               {/* Right Content - Single PNG Image */}
               <div className="relative flex justify-center items-start pt-[-50px]">
