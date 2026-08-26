@@ -17,15 +17,15 @@ export default function HomePage() {
 
   const carouselImages = [
     "/images/home/flayers/sostenibilidad.jpeg",
-    "/images/home/flayers/sistemas-gestión-energía-3.jpeg",
-    "/images/home/flayers/EC0391-3.jpeg",
-    "/images/home/flayers/EC0397-3.jpeg",
-    "/images/home/flayers/EC0490-3.jpeg",
-    "/images/home/flayers/EC0493-3.jpeg",
-    "/images/home/flayers/EC0517-3.jpeg",
-    "/images/home/flayers/EC0680-3.jpeg",
-    "/images/home/flayers/EC1017-1.jpeg",
-    "/images/home/flayers/EC1018-3.jpeg"
+    "/images/home/flayers/sistemas-gestión-energía-1.jpeg",
+    "/images/home/flayers/EC0391-1.jpeg",
+    "/images/home/flayers/EC0397-1.jpeg",
+    "/images/home/flayers/EC0490-1.jpeg",
+    "/images/home/flayers/EC0493-1.jpeg",
+    "/images/home/flayers/EC0517-4.jpeg",
+    "/images/home/flayers/EC0680-1.jpeg",
+    "/images/home/flayers/EC1017-2.jpeg",
+    "/images/home/flayers/EC1018-1.jpeg"
   ]
 
   const commitments = [
