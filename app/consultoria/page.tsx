@@ -52,6 +52,7 @@ const areasConsultoria = [
       },
       {
         title: "Asesoría e implementación de Sistemas de Gestión de la Energía \n                                        ISO 50001",
+          title: "ISO 50001",
         problematica: [
           "Requisito legal para los Usuarios con Patrón de Alto Consumo Energético (UPAC´s).",
           "Falta de planeación sobre gestión de la energía en las organizaciones.",
