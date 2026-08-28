@@ -6,29 +6,360 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { NavHeader } from "@/components/nav-header"
 
-const odsItems = [
-  { id: 1, image: "/images/ods/ods-español/1.png", alt: "01 Fin de la pobreza" },
-  { id: 2, image: "/images/ods/ods-español/2.png", alt: "02 Hambre cero" },
-  { id: 3, image: "/images/ods/ods-español/3.png", alt: "03 Salud y bienestar" },
-  { id: 4, image: "/images/ods/ods-español/4.png", alt: "04 Educación de calidad" },
-  { id: 5, image: "/images/ods/ods-español/5.png", alt: "05 Igualdad de género" },
-  { id: 6, image: "/images/ods/ods-español/6.png", alt: "06 Agua limpia y saneamiento" },
-  { id: 7, image: "/images/ods/ods-español/7.png", alt: "07 Energía asequible y no contaminante" },
-  { id: 8, image: "/images/ods/ods-español/8.png", alt: "08 Trabajo decente y crecimiento económico" },
-  { id: 9, image: "/images/ods/ods-español/9.png", alt: "09 Industria, innovación e infraestructura" },
-  { id: 10, image: "/images/ods/ods-español/10.png", alt: "10 Reducción de las desigualdades" },
-  { id: 11, image: "/images/ods/ods-español/11.png", alt: "11 Ciudades y comunidades sostenibles" },
-  { id: 12, image: "/images/ods/ods-español/12.png", alt: "12 Producción y consumo responsables" },
-  { id: 13, image: "/images/ods/ods-español/13.png", alt: "13 Acción por el clima" },
-  { id: 14, image: "/images/ods/ods-español/14.png", alt: "14 Vida submarina" },
-  { id: 15, image: "/images/ods/ods-español/15.png", alt: "15 Vida de ecosistemas terrestres" },
-  { id: 16, image: "/images/ods/ods-español/16.png", alt: "16 Paz, justicia e instituciones sólidas" },
-  { id: 17, image: "/images/ods/ods-español/17.png", alt: "17 Alianzas para lograr los objetivos" },
-];
+const areasConsultoria = [
+  {
+    id: 1,
+    title: "Energía",
+    image: "/images/consultoria/energia.png",
+    color: "bg-[#009FE3]",
+    accentColor: "#009FE3",
+    darkColor: "#0078AD", //titulo
+    mediumColor: "#009FE3", //problematica
+    lightColor: "#45B5E8", //detalle del servicio
+    lighterColor: "#9ADAF2", //beneficios
+    problematicaTextColor:"#D9F3FC",
+    detailTextColor: "#005B83",
+    benefitsTextColor: "#00445F",
+    services: [
+      {
+        title: "Diagnósticos Energéticos",
+        problematica: [
+          "Altos costos de operación y mantenimiento que impactan negativamente en la productividad.",
+          "Alto consumo energético que contribuye al deterioro del medio ambiente.",
+          "Elevados costos de facturación de electricidad y combustibles.",
+        ],
+        detalle: [
+          "Visita técnica en sitio.",
+          "Entrevistas sobre la operación.",
+          "Mediciones de los sistemas de consumo energético.",
+          "Consolidación y análisis de hallazgos.",
+          "Análisis y cambio de tarifas eléctricas.",
+          "Elaboración de propuestas de ahorro de energía (iluminación, bombeo, aire acondicionado, refrigeración, factor de potencia, motores, etc.)",
+          "Propuesta económica de oportunidades de ahorro.",
+          "Análisis de reducción de dióxido de carbono.",
+          "Elaboración de reporte."
+        ],
+        beneficios: [
+          "Identificación de potenciales de ahorro energético.",
+          "Reducción de consumo energético en instalaciones.",
+          "Propuestas para la reducción de emisiones de dióxido de carbono.",
+          "Acción socialmente responsable.",
+          "Personal calificado en materia de eficiencia energética.",
+          "Conocimiento de los conceptos de la facturación del servicio de energía eléctrica.",
+          "Conocimiento de la eficiencia en la operación de los sistemas de consumo energético.",
+          "Plan de inversión a corto y mediano plazo.",
+        ],
+      },
+      {
+        title: "Asesoría e implementación de Sistemas de Gestión de la Energía\nISO 50001",
+        problematica: [
+          "Requisito legal para los Usuarios con Patrón de Alto Consumo Energético (UPAC´s).",
+          "Falta de planeación sobre gestión de la energía en las organizaciones.",
+          "Poco conocimiento sobre el desempeño energético y su impacto en las finanzas de la organización.",
+          "Deficiente selección de indicadores de desempeño energéticos en los sistemas e instalaciones.",
+        ],
+        detalle: [
+          "Definición de alcances y límites.",
+          "Contexto de la organización.",
+          "Elaboración de la política energética de la organización.",
+          "Auditoría energética.",
+          "Instalación del Comité de Energía.",
+          "Línea base (LBEn) e indicadores energéticos (IDEn).",
+          "Construcción del plan de acción de energía.",
+          "Implementación del sistema.",
+          "Campaña de promoción y difusión.",
+          "Diseño de campaña de capacitación.",
+          "Medición y de verificación de desempeño energético.",
+          "Auditoría Interna.",
+        ],
+        beneficios: [
+          "Cumplimiento de las obligaciones gubernamentales.",
+          "Implantar en la organización una cultura integral para el cuidado de la energía y el ambiente.",
+          "Compromiso organizativo.",
+          "Benchmarking energético.",
+          "Reducción de costos.",
+          "Aprovechamiento de recursos financieros y energéticos.",
+          "Proyección de la imagen corporativa.",
+        ],
+      },
+      {
+        title: "Legislación y normatividad energética",
+        problematica: [
+          "Desconocimiento de los riesgos y oportunidades por los cambios en la regulación en el ámbito de energía."
+        ],
+        detalle: [
+          "Diagnóstico de cumplimiento con regulaciones de energía.",
+          "Requisitos y oportunidades de usuarios calificados",
+        ],
+        beneficios: [
+          "Mitigar el riesgo por falta de conocimiento sobre las nuevas regulaciones aplicables.",
+          "Identificación temprana de las oportunidades que se presentarán en el mercado eléctrico.",
+          "Identificar las mejores opciones de agregación para negociar tarifas competitivas con los suministradores.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Seguridad y Salud en el Trabajo",
+    image: "/images/consultoria/Seguridad.png",
+    color: "bg-[#0052A1]",
+    accentColor: "#0052A1",
+    darkColor: "#003B75", //titulo
+    mediumColor: "#0052A1", //problematica
+    lightColor: "#407BB8", //detalle del servicio
+    lighterColor: "#8FB1D4", //beneficios
+    problematicaTextColor:"#DCEEFF",
+    detailTextColor: "#003B75",
+    benefitsTextColor: "#002B55",
+    services: [
+      {
+        title: "Implementación del Programa de Autogestión en Seguridad y Salud en el Trabajo (PASST)",
+        problematica: [
+          "Altas tasas de accidentes",
+        ],
+        detalle: [
+          "Identificación de normas aplicables al giro de la empresa",
+          "Instauración del sistema de administración en SyST",
+          "Evaluación del sistema de SyST",
+          "Evaluación de cumplimiento normativo",
+          "Esquema de autoevaluación",
+          "Matriz de riesgos",
+        ],
+        beneficios: [
+          "Distintivo de empresa segura",
+          "Reducir riesgos de accidentes o laborales",
+        ],
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Ambiental",
+    image: "/images/consultoria/carbono-emisiones.png",
+    color: "bg-[#00AEA5]",
+    accentColor: "#00AEA5",
+    darkColor: "#00877F", //titulo
+    mediumColor: "#00AEA5", //problematica
+    lightColor: "#4CC7C0", //detalle del servicio
+    lighterColor: "#99DFDB", //beneficios
+    problematicaTextColor:"#D9F7F4",
+    detailTextColor: "#006F69",
+    benefitsTextColor: "#00524E",
+    services: [
+      {
+        title: "Asesoría e implementación de Sistemas de Gestión Ambiental",
+        problematica: [
+          "Contaminación Industrial y Desechos.",
+          "Gestión de Residuos Peligrosos.",
+        ],
+        detalle: [
+          "Definición de alcances y límites.",
+          "Contexto de la organización.",
+          "Elaboración de la política energética de la organización.",
+          "Auditoría energética.",
+          "Instalación del Comité de Energía.",
+          "Línea base (LBEn) e indicadores energéticos (IDEn).",
+          "Construcción del plan de acción de energía.",
+          "Implementación del sistema.",
+          "Campaña de promoción y difusión.",
+          "Diseño de campaña de capacitación.",
+          "Medición y de verificación de desempeño energético.",
+          "Auditoría Interna.",
+        ],
+        beneficios: [
+          "Cumplimiento Legal.",
+          "Reducción de Costos y Eficiencia.",
+          "Mejora de la Reputación.",
+          "Gestión de Riesgos.",
+          "Ventaja Competitiva y Acceso a Mercados.",
+          "Mejora Continua.",
+        ],
+      },
+      {
+        title: "Estudios de vulnerabilidad y adaptación",
+        problematica: [
+          "Impacto de las emisiones de CyGEI a nivel local",
+          "Desconocimiento sobre los riesgos asociados a los impactos del cambio climático en una comunicada, municipio, estado, sector o empresa.",
+        ],
+        detalle: [
+          "Mapeo de los riesgos vinculados a los impactos por el cambio climático en el alcance del objeto de estudio.",
+          "Diagnósticos de vulnerabilidad y adaptación.", 
+          "Diseño de medidas de adaptación especíicas.",
+          "Diseño de MRV para evaluar los beneficios y resultados de las medidas implementadas.",
+        ],
+        beneficios: [
+          "Identificación temprana de los riesgos por el cambio climático.",
+          "Robustecer la resiliencia de las zonas o sectores en estudio.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Sostentabilidad",
+    image: "/images/consultoria/sustentabilidad.png",
+    color: "bg-[#702283]",
+    accentColor: "#702283",
+    darkColor: "#531865", //titulo
+    mediumColor: "#702283", //problematica
+    lightColor: "#9560A1", //detalle del servicio
+    lighterColor: "#C4A5CB", //beneficios
+    problematicaTextColor:"#F0DDF4",
+    detailTextColor: "#5A176A",
+    benefitsTextColor: "#43114F",
+    services: [
+      {
+        title: "Diseño de estrategias de sustentabilidad",
+        problematica: [
+          "En la actualidad el contar una estrategia de sustentabilidad es una necesidad de toda empresa.",
+          "Transparencia y comunicación, Licencia para operar de las empresas a largo plazo.",
+          "Cuando las empresas reciben fondos internacionales se les solicita cumplir con ciertos estándares de responsabilidad social y sustentabilidad.",
+          "Desconocimiento de los grupos clave que podrían poner en riesgo la estrategia a largo plazo de la empresa.",
+          "Falta de estrategia para medir el desempeño y el impacto de las acciones de sustentabilidad con enfoque de negocio.",
+        ],
+        detalle: [
+          "Diseño de estrategias de sustentabilidad ad-hoc al sector y/o empresa.",
+          "Elaboración y diseño de reportes GRI.",
+          "Implementación de casos de negocio  dependiendo del sector o producto.",
+          "Implementación de estándares de sustentabilidad enfocados a la responsabilidad social como ISO26000 (Guidance on social responsability).",
+          "SA 8000 (Social Accountability International), guías del International Financial Council (IFC*).",
+          "Mapeo estratégico de actores clave y materialidad.",
+          "Diseño de indicadores estratégicos de sustentabilidad.",
+        ],
+        beneficios: [
+          "Asegurar la permanencia de la empresa a largo plazo.",
+          "Mitigar los riesgos por el impacto de la empresa en los ámbitos sociales y ambientales.",
+          "Contar con una estrategia que permita potencializar las inversiones en mitigación de impactos ambientales y sociales.",
+          "Desarrollar una estrategia de sustentabilidad robusta y tejida acorde al negocio.",
+          "Proveer transparencia, integridad y certidumbre a los actores clave vinculados con la cadena de valor de la empresa.",
+          "Robustecer la imagen de la empresa.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Desarrollo Empresarial",
+    image: "/images/consultoria/desarrollo-social.png",
+    color: "bg-[#009647]",
+    accentColor: "#009647",
+    darkColor: "#006E35", //titulo
+    mediumColor: "#009647", //problematica
+    lightColor: "#45B66F", //detalle del servicio
+    lighterColor: "#8AD39F", //beneficios
+    problematicaTextColor:"#DDF5E7",
+    detailTextColor: "#00662F",
+    benefitsTextColor: "#004A22",
+    services: [
+      {
+        title: "Programa de inclusión infantil para el cuidado ambiental y ahorro de energía",
+        problematica: [
+          "Falta de programas educativos en materia ambiental y de ahorro de energía dirigidos al sector infantil.",
+        ],
+        detalle: [
+          "Plática educativa de los tipos de energía, cómo se genera y su impacto en el medio ambiente.",
+          "Acciones de ahorro de energía eléctrica casa y cuidado del ambiente.",
+          "Aplicación de juegos y dinámicas de reforzamiento.",
+          "Apoyos didácticos a través de personajes amigables que difunden la conciencia ambiental y el ahorro de energía.",
+        ],
+        beneficios: [
+          "Niños con valores ambientales y comprometidos socialmente.",
+          "Promotores del ahorro de energía en la vivienda.",
+          "Efecto multiplicador para reducir el consumo energético a nivel social.",
+          "Formación de recursos humanos para asegurar el desarrollo sustentable.",
+        ],
+      },
+      {
+        title: "Programa de desarrollo de hábitos para el ahorro en el núcleo familiar",
+        problematica: [
+          "Consumos elevados de energía en las viviendas debidos instalaciones ineficientes, problemas de mantenimiento y desconocimientos sobre la facturación que repercuten en la economía de las familias.",
+        ],
+        detalle: [
+          "Pláticas y talleres en donde las familias aprenden la importancia del cuidado de los recursos naturales, conocen su factura eléctrica y algunos tips y medidas prácticas para ahorrar energía eléctrica, agua y gas.",
+        ],
+        beneficios: [
+          "Generación de conciencia sobre el cuidado del ambiente y el ahorro de los recursos naturales.",
+          "Generación de una cultura de ahorro de energía y agua.",
+          "Reducción de costos a partir de acciones sencillas y de bajo o nulo costo.",
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Edificación",
+    image: "/images/consultoria/Edificacion.png",
+    color: "bg-[#7868A8]",
+    accentColor: "#7868A8",
+    darkColor: "#5A4A86", //titulo
+    mediumColor: "#7868A8", //problematica
+    lightColor: "#9B8DC0", //detalle del servicio
+    lighterColor: "#C0B8D8", //beneficios
+    problematicaTextColor:"#EEEAF7",
+    detailTextColor: "#5A4A86",
+    benefitsTextColor: "#46386B",
+    services: [
+      {
+        title: "Implementación de proyectos de edificación sustentable",
+        problematica: [
+          "Hoy en día las organizaciones gastan importantes recursos económicos para satisfacer las necesidades de energía y de confort e sus edificios, sin embargo no existe una cultura de desarrollo sustentable de la edificación para que de raíz se diseñen edificaciones que reduzcan sus consumos y demandas energéticas a partir de un diseño bioclimático y medidas pasivas.",
+        ],
+        detalle: [
+          "Estudio de implementación de medidas pasivas y ecoeficientes para el mejoramiento del desempeño integral de las edificaciones.",
+          "Implementación de buenas prácticas organizacionales.",
+        ],
+        beneficios: [
+          "Mayores ahorros en consumos energéticos.",
+          "Ahorros económicos en la facturación de los servicios de energía.",
+          "Imagen corporativa sustentable.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 008 (Envolvente Térmica de Edificios No Residenciales)",
+        problematica: [
+          "Edificaciones no residenciales que no cumple con los requisitos normativos para el diseño de la envolvente térmica.",
+          "Altos costos en el acondicionamiento de aire al interior de los edificios.",
+          "Bajo desempeño laboral de los trabajadores debido a un estado de desconfort",
+        ],
+        detalle: [
+          "Estudio de la envolvente térmica de las edificaciones a partir de sus materiales constructivos y diseño original.",
+          "Propuestas de medidas pasivas de implementación para reducir la ganancia de calor en el edificio.",
+          "Reducción estimada del consumo energético necesario para el acondicionamiento de aire.",
+        ],
+        beneficios: [
+          "Reducción de las necesidades de acondicionamiento de aire vía sistemas activos.",
+          "Reducción de la facturación eléctrica de la empresa.",
+          "Mayor confort de los trabajadores que se traduce en el mejoramiento de la productividad.",
+        ],
+      },
+      {
+        title: "Evaluación de la NOM 020 (Envolvente Térmica de Edificios Residenciales)",
+        problematica: [
+          "Actualmente las familias adquieren viviendas ineficientes energéticamente a un bajo costo que se traducen a través del tiempo en problemas económicos para los ocupantes debido a usos de sistemas de aire acondicionado y calefacción.",
+        ],
+        detalle: [
+          "Estudio de ganancia calórica en el proyecto ejecutivo para la construcción de la vivienda en cuanto a sus materiales constructivos.",
+          "Propuestas de mejora para la envolvente térmica de la vivienda.",
+        ],
+        beneficios: [
+          "Reducción de costos para las familias.",
+          "Mayor calidad de vida en el interior de la vivienda debido a un mayor confort térmico.",
+        ],
+      },
+    ],
+  },
+]
 
-export default function InvestigacionConsultoriaPage() {
+export default function ConsultoriaPage() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [itemsPerView, setItemsPerView] = useState(5)
+  const [itemsPerView, setItemsPerView] = useState(6)
+  const [selectedArea, setSelectedArea] = useState<
+    (typeof areasConsultoria)[0] | null
+  >(null)
+  const [selectedService, setSelectedService] = useState<
+    (typeof areasConsultoria)[0]["services"][0] | null
+  >(null)
 
   useEffect(() => {
     const handleResize = () => {
@@ -38,10 +369,8 @@ export default function InvestigacionConsultoriaPage() {
         setItemsPerView(2)
       } else if (window.innerWidth < 1024) {
         setItemsPerView(3)
-      } else if (window.innerWidth < 1280) {
-        setItemsPerView(4)
       } else {
-        setItemsPerView(5)
+        setItemsPerView(4) // Siempre máximo 4 cards visibles
       }
     }
 
@@ -50,7 +379,7 @@ export default function InvestigacionConsultoriaPage() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const maxIndex = Math.max(0, odsItems.length - itemsPerView)
+  const maxIndex = Math.max(0, areasConsultoria.length - itemsPerView)
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
@@ -63,7 +392,7 @@ export default function InvestigacionConsultoriaPage() {
   // Auto-advance carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1))
+      nextSlide()
     }, 4000)
     return () => clearInterval(interval)
   }, [maxIndex])
@@ -72,557 +401,354 @@ export default function InvestigacionConsultoriaPage() {
     <div className="min-h-screen bg-white">
       <NavHeader />
 
-      {/* ODS Section */}
-      <section className="pt-32 pb-16 bg-white relative">
-        {/* Background decoration */}
-        <div className="absolute inset-0 opacity-5">
-          <Image src="/images/leaf-background.png" alt="" fill className="object-cover" />
+      {/* Main Content */}
+      <main className="pt-16">
+        {/* Hero Section - Consultoría */}
+        <section
+          className="relative overflow-hidden min-h-[70vh] py-20"
+          style={{
+            backgroundImage: "url(/images/capacitacion/waves-background.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "left center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 max-w-7xl mx-auto">
+              {/* Left Side - Colibri Image */}
+              <div className="flex-shrink-0 w-full lg:w-1/2 flex justify-center">
+                <Image
+                  src="/images/colibri-consultoria.png"
+                  alt="CIDTES Consultoría"
+                  width={500}
+                  height={500}
+                  className="w-72 h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] object-contain"
+                />
+              </div>
+
+              {/* Right Side - Content */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                {/* Decorative line image */}
+                <Image src="/images/linea-decorativa.png" alt="" width={126} height={10} className="h-2 w-32" />
+
+                {/* Title without underline */}
+                <h1 className="text-4xl md:text-5xl font-bold text-[#0D5C5C]">Consultoría</h1>
+
+                {/* Description paragraphs */}
+                <div className="space-y-6 text-gray-700 text-lg leading-relaxed">
+                  <p>
+                    En CIDTES <strong className="text-gray-900">trabajamos los problemas actuales</strong> con el
+                    objetivo de <strong className="text-gray-900">cambiar</strong> el modelo productivo, social y
+                    laboral con conciencia ambiental y sostenible.
+                  </p>
+                  <p>
+                    En el área de Consultoría <strong className="text-gray-900">generamos</strong> servicios de asesoría y
+                    auditoría en temas de Seguridad, Salud, Energía, Medio Ambiente y Sustentabilidad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Wave Separator */}
+        <div className="relative w-full -mt-1">
+          <Image
+            src="/images/wave-separator.png"
+            alt=""
+            width={1920}
+            height={100}
+            className="w-full h-auto object-cover"
+          />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          {/* Title with decorative line */}
-          <div className="text-center mb-8">
-            {/* Blue-Purple Line */}
-            <div className="flex justify-center mb-4">
-              <Image
-                src="/images/linea-azul-morado.png"
-                alt=""
-                width={150}
-                height={8}
-                className="h-2 w-auto"
-              />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a365d]">
-              ODS y agenda 2030
-            </h2>
-          </div>
+        {/* Áreas de Consultoría Section */}
+        <section className="py-16 bg-gray-50 relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-10 left-10 w-20 h-20 bg-[#0891B2]/20 rounded-full blur-xl"></div>
+          <div className="absolute bottom-10 right-10 w-32 h-32 bg-[#6B46C1]/20 rounded-full blur-xl"></div>
+          <div className="absolute top-1/2 left-5 w-16 h-16 bg-[#059669]/20 rounded-full blur-lg"></div>
 
-          {/* Description */}
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-gray-700 text-lg leading-relaxed">
-              En CIDTES <strong>nos comprometemos en los tres pilares económico, ambiental y social</strong> y nos
-              alineamos a los compromisos y cumplimiento de las ODS de la ONU. Cidtes está alineado a los
-              compromiso y cumplimientos a los objetivos de la ODS, nos basamos en:
-            </p>
-          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Title */}
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0D5C5C] text-center mb-12">Áreas de Consultoría</h2>
 
-          {/* Los 17 ODS Badge */}
-          <div className="flex justify-center mb-12">
-            <div className="border-2 border-gray-300 rounded-full px-8 py-3">
-              <span className="text-2xl font-light text-gray-700">Los 17 ODS</span>
-            </div>
-          </div>
+            {/* Carousel */}
+            <div className="relative max-w-7xl mx-auto">
+              {/* Cards Container */}
+              <div className="overflow-hidden">
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+                  }}
+                >
+                  {areasConsultoria.map((area) => (
+                    <div
+                      key={area.id}
+                      className="flex-shrink-0 px-2"
+                      style={{ width: `${100 / itemsPerView}%` }}
+                    >
+                      <div
+                        onClick={() => {
+                            if (selectedArea?.id === area.id) {
+                                setSelectedArea(null)
+                                setSelectedService(null)
+                            } else {
+                                setSelectedArea(area)
+                                setSelectedService(null)
+                            }
+                        }}
+                        className={`bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer transition-all duration-300
+                          ${
+                            selectedArea?.id === area.id
+                              ? "ring-4 ring-[#0891B2]"
+                              : "hover:shadow-xl"
+                          }`}
+                      >
+                        {/* Image */}
+                        <div className="relative aspect-[2/3] overflow-hidden">
+                          <Image
+                            src={area.image || "/placeholder.svg"}
+                            alt={area.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                        </div>
+                        {/* Title Label */}
+                        <div
+                          className={`${area.color} h-24 px-4 relative overflow-hidden flex items-center justify-center`}
+                        >
+                          <div className="absolute -right-6 -top-6 w-20 h-20 bg-white/10 rounded-full" />
+                          <div className="absolute -left-4 -bottom-8 w-16 h-16 bg-white/10 rounded-full" />
 
-          {/* ODS Carousel */}
-          <div className="relative max-w-6xl mx-auto">
-            {/* Carousel Container */}
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
-                }}
-              >
-                {odsItems.map((item) => (
-                  <div
-                    key={item.id}
-                    className="flex-shrink-0 px-2"
-                    style={{ width: `${100 / itemsPerView}%` }}
-                  >
-                    <div className="overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
-                      <div className="relative aspect-[3/2]">
-                        <Image
-                          src={item.image || "/placeholder.svg"}
-                          alt={item.alt}
-                          fill
-                          className="object-contain group-hover:scale-105 transition-transform duration-500"
-                        />
+                          <p className="relative z-10 text-white text-center font-bold text-lg leading-tight tracking-wide">
+                            {area.title}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center items-center gap-2 mt-8">
+                {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIndex === index ? "w-6 bg-[#0891B2]" : "bg-gray-300 hover:bg-gray-400"
+                      }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
                 ))}
               </div>
-            </div>
 
-            {/* Dots Indicator */}
-            <div className="flex justify-center gap-2 mt-8">
-              {Array.from({ length: maxIndex + 1 }).map((_, index) => (
+              {/* Navigation Arrows */}
+              <div className="flex justify-center items-center gap-4 mt-4">
                 <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index ? "bg-[#0891B2] w-6" : "bg-gray-300"
-                    }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            {/* Navigation Arrows */}
-            <div className="flex justify-center gap-4 mt-6">
-              <button
-                onClick={prevSlide}
-                className="p-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-[#0891B2] hover:text-[#0891B2] transition-colors duration-300"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="p-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-[#0891B2] hover:text-[#0891B2] transition-colors duration-300"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Wave Separator */}
-      <div className="h-16 bg-white relative overflow-hidden">
-        <Image src="/images/wave-separator.png" alt="Wave separator" fill className="object-cover object-center" />
-      </div>
-
-      {/* Comunidades Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          {/* Title */}
-          <div className="text-center mb-12">
-            <h2
-              className="text-5xl lg:text-6xl font-bold inline-block pb-3"
-              style={{
-                color: '#14b8a6',
-                borderBottom: '5px solid #14b8a6'
-              }}
-            >
-              DESARROLLO SOCIAL, ECONOMICO Y AMBIENTAL 
-            </h2>
-          </div>
-
-          {/* Image */}
-          <div className="mb-12 flex justify-center">
-            <div className="max-w-4xl w-full">
-              <Image
-                src="/images/comunidades-global.png"
-                alt="Comunidades globales conectadas"
-                width={1200}
-                height={400}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Sistemas de Gestión Card */}
-            <div>
-              <div className="text-white px-12 py-3 rounded text-center" style={{ background: 'linear-gradient(90deg, #0E9991 0%, #662686 100%)', minWidth: '380px', display: 'inline-block' }}>
-                <h3 className="text-xl font-semibold">Sistemas de Gestión</h3>
-              </div>
-              <div className="mt-6">
-                <p className="text-gray-800 mb-4 text-sm">
-                  Se analiza para <span className="font-bold">facilitar</span> la implementación o <span className="font-bold">accesos</span> a los sistemas de gestión a las PYMES:
-                </p>
-                <ul className="space-y-1 text-gray-800 text-sm">
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Calidad</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Energía</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>SyST</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Sostenibilidad</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="mr-2">•</span>
-                    <span>Compliance (Texto)</span>
-                  </li>
-                </ul>
+                  onClick={prevSlide}
+                  className="w-10 h-10 rounded-full border-2 border-[#0891B2] flex items-center justify-center text-[#0891B2] hover:bg-[#0891B2] hover:text-white transition-colors duration-300"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="w-10 h-10 rounded-full border-2 border-[#0891B2] flex items-center justify-center text-[#0891B2] hover:bg-[#0891B2] hover:text-white transition-colors duration-300"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
               </div>
             </div>
 
-            {/* Educación Dual Card */}
-            <div>
-              <div className="text-white px-12 py-3 rounded text-center" style={{ background: 'linear-gradient(90deg, #0E9991 0%, #662686 100%)', minWidth: '340px', display: 'inline-block' }}>
-                <h3 className="text-xl font-semibold">Educación Dual</h3>
-              </div>
-              <div className="mt-6">
-                <p className="text-gray-800 leading-relaxed text-sm">
-                  La formación dual <span className="font-bold">es un modelo educativo</span> que integra teoría y práctica, <span className="font-bold">preparando a estudiantes</span> para el empleo mediante la colaboración entre instituciones educativas y empresas, lo que asegura su relevancia y alineación con el mercado laboral.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Sectores Cards Section */}
-      <section className="pt-8 pb-16 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="relative max-w-6xl mx-auto sectores-container">
-            {/* Connector 1 - Between Sector Privado and Educando */}
-            <div id="connector-1" className="hidden md:block absolute top-1/2 left-[29.5%] -translate-y-1/2 z-30 transition-all duration-300 hover:scale-110 hover:brightness-110 cursor-pointer">
-              <Image
-                src="/images/connector-1.png"
-                alt=""
-                width={80}
-                height={20}
-                className="w-20 h-auto"
-              />
-            </div>
-
-            {/* Connector 2 - Between Educando and Sector Educativo */}
-            <div id="connector-2" className="hidden md:block absolute top-1/2 right-[31%] -translate-y-1/2 z-30 transition-all duration-300 hover:scale-110 hover:brightness-110 cursor-pointer">
-              <Image
-                src="/images/connector-2.png"
-                alt=""
-                width={80}
-                height={20}
-                className="w-20 h-auto"
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-              {/* Sector Privado Card */}
+            {selectedArea && (
               <div
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300 card-privado"
-                onMouseEnter={() => {
-                  const connector = document.getElementById('connector-1');
-                  if (connector) {
-                    connector.style.transform = 'translateY(-50%) scale(1.1)';
-                    connector.style.filter = 'brightness(1.2)';
-                  }
-                }}
-                onMouseLeave={() => {
-                  const connector = document.getElementById('connector-1');
-                  if (connector) {
-                    connector.style.transform = 'translateY(-50%) scale(1)';
-                    connector.style.filter = 'brightness(1)';
-                  }
-                }}
-              >
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Sector Privado</h3>
-
-                <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-                    <Image
-                      src="/images/icon-sector-privado.png"
-                      alt="Sector Privado"
-                      width={60}
-                      height={60}
-                      className="w-auto h-20 object-contain"
-                    />
+                className="mt-14 max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-5 duration-500">
+                <div
+                  className="bg-white rounded-3xl shadow-2xl overflow-hidden"
+                  style={{
+                    borderTop: `8px solid ${selectedArea.accentColor}`,
+                  }}>
+                  <div className="px-6 md:px-10 pt-8 pb-6 text-center">
+                    <span
+                      className="inline-block px-5 py-2 rounded-full text-white text-sm font-bold uppercase tracking-wider shadow-md"
+                      style={{
+                        backgroundColor: selectedArea.accentColor,
+                      }}>
+                      Área de Consultoría
+                    </span>
+                    <h3
+                      className="mt-4 text-3xl md:text-4xl font-extrabold"
+                      style={{
+                        color: selectedArea.accentColor,
+                      }}>
+                      {selectedArea.title}
+                    </h3>
+                    <div
+                      className="mx-auto mt-4 h-1 w-24 rounded-full"
+                      style={{
+                        backgroundColor: selectedArea.accentColor,
+                      }}/>
+                    <p className="mt-4 text-gray-600">
+                      Conoce los servicios que ofrecemos en esta área
+                    </p>
                   </div>
 
-                  {/* Divider */}
-                  <div className="w-px bg-cyan-500 self-stretch"></div>
+                  {/* Servicios */}
+                  <div className="px-6 md:px-10 pb-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      {selectedArea.services.map((service, index) => (
+                        <button
+                          key={service.title}
+                          onClick={() => setSelectedService(service)}
+                          className={`group relative min-h-[110px] p-5 rounded-2xl
+                            transition-all duration-300 border-2
+                            ${
+                                selectedService?.title === service.title
+                                    ? "text-white shadow-xl scale-105"
+                                    : "bg-gray-50 text-gray-700 hover:-translate-y-2 hover:shadow-xl"
+                            }`}
+                          style={{
+                              backgroundColor:
+                                  selectedService?.title === service.title
+                                      ? selectedArea.accentColor
+                                      : undefined,
+                              borderColor: `${selectedArea.accentColor}40`,
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.backgroundColor =
+                              selectedArea.accentColor
+                            e.currentTarget.style.color = "white"
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.backgroundColor = "#f9fafb"
+                            e.currentTarget.style.color = "#374151"
+                          }}>
+                          <span
+                            className="absolute -top-3 -left-3
+                                      w-8 h-8 rounded-full
+                                      flex items-center justify-center
+                                      text-white font-bold shadow-md"
+                            style={{
+                              backgroundColor: selectedArea.accentColor,
+                            }}>
+                            {index + 1}
+                          </span>
+                          <span className="block pr-2 whitespace-pre-line">
+                            {service.title}
+                          </span>
+                          <span
+                            className="absolute right-4 bottom-4
+                                      opacity-0 group-hover:opacity-100
+                                      transition-opacity duration-300">
+                            →
+                          </span>
+                        </button>
+                      ))}
+                    </div>
 
-                  {/* Content */}
-                  <div className="flex-1">
-                    <ul className="space-y-2 text-gray-800 text-sm">
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Operador empresarial</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Formador</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Instructor</span>
-                      </li>
-                    </ul>
+                    {selectedService && (
+                      <div className="mt-10 overflow-hidden rounded-2xl border shadow-lg">
+                        <div
+                          className="px-6 py-4 text-white"
+                          style={{
+                            backgroundColor: selectedArea.darkColor,
+                          }}>
+                          <h4 className="text-2xl font-bold whitespace-pre-line">
+                            {selectedService.title}
+                          </h4>
+                        </div>
+
+                        <table className="w-full border-collapse">
+                          <tbody>
+                            {/* Problemática */}
+                            <tr className="border-b">
+                              <td
+                                className="w-64 p-5 font-bold text-white align-top"
+                                style={{
+                                  backgroundColor: selectedArea.mediumColor,
+                                  color: selectedArea.problematicaTextColor,
+                                }}
+                              >
+                                Problemática
+                              </td>
+
+                              <td className="bg-white p-5">
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.problematica.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+
+                            {/* Detalle del servicio */}
+                            <tr className="border-b">
+                              <td
+                                className="w-64 p-5 font-bold align-top"
+                                style={{
+                                  backgroundColor: selectedArea.lightColor,
+                                  color: selectedArea.detailTextColor,
+                                }}
+                              >
+                                Detalle del servicio
+                              </td>
+
+                              <td className="bg-gray-50 p-5">
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.detalle.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+
+                            {/* Beneficios */}
+                            <tr>
+                              <td
+                                className="p-5 font-bold align-top"
+                                style={{
+                                  backgroundColor: selectedArea.lighterColor,
+                                  color: selectedArea.benefitsTextColor,
+                                }}
+                              >
+                                Beneficios
+                              </td>
+
+                              <td className="bg-white p-5">
+                                <div className="h-28 overflow-y-auto pr-3">
+                                  <ul className="space-y-2 list-disc list-inside">
+                                    {selectedService.beneficios.map((item) => (
+                                      <li key={item}>{item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                  <div
+                    className="px-6 py-4 text-center text-white text-sm font-medium"
+                    style={{
+                      backgroundColor: selectedArea.accentColor,
+                    }}>
                   </div>
                 </div>
               </div>
-
-              {/* Educando Card */}
-              <div
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300"
-                onMouseEnter={() => {
-                  const connector1 = document.getElementById('connector-1');
-                  const connector2 = document.getElementById('connector-2');
-                  if (connector1) {
-                    connector1.style.transform = 'translateY(-50%) scale(1.1)';
-                    connector1.style.filter = 'brightness(1.2)';
-                  }
-                  if (connector2) {
-                    connector2.style.transform = 'translateY(-50%) scale(1.1)';
-                    connector2.style.filter = 'brightness(1.2)';
-                  }
-                }}
-                onMouseLeave={() => {
-                  const connector1 = document.getElementById('connector-1');
-                  const connector2 = document.getElementById('connector-2');
-                  if (connector1) {
-                    connector1.style.transform = 'translateY(-50%) scale(1)';
-                    connector1.style.filter = 'brightness(1)';
-                  }
-                  if (connector2) {
-                    connector2.style.transform = 'translateY(-50%) scale(1)';
-                    connector2.style.filter = 'brightness(1)';
-                  }
-                }}
-              >
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Educando</h3>
-
-                <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-                    <Image
-                      src="/images/icon-educando.png"
-                      alt="Educando"
-                      width={60}
-                      height={60}
-                      className="w-auto h-20 object-contain"
-                    />
-                  </div>
-
-                  {/* Divider */}
-                  <div className="w-px bg-purple-500 self-stretch"></div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <ul className="space-y-2 text-gray-800 text-sm">
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Padres de familia</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Sector Educativo Card */}
-              <div
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-300"
-                onMouseEnter={() => {
-                  const connector = document.getElementById('connector-2');
-                  if (connector) {
-                    connector.style.transform = 'translateY(-50%) scale(1.1)';
-                    connector.style.filter = 'brightness(1.2)';
-                  }
-                }}
-                onMouseLeave={() => {
-                  const connector = document.getElementById('connector-2');
-                  if (connector) {
-                    connector.style.transform = 'translateY(-50%) scale(1)';
-                    connector.style.filter = 'brightness(1)';
-                  }
-                }}
-              >
-                <h3 className="text-xl font-bold text-gray-800 mb-6">Sector Educativo</h3>
-
-                <div className="flex items-start gap-4">
-                  {/* Icon */}
-                  <div className="flex-shrink-0 transition-transform duration-300 hover:scale-110">
-                    <Image
-                      src="/images/icon-sector-educativo.png"
-                      alt="Sector Educativo"
-                      width={60}
-                      height={60}
-                      className="w-auto h-20 object-contain"
-                    />
-                  </div>
-
-                  {/* Divider */}
-                  <div className="w-px bg-pink-500 self-stretch"></div>
-
-                  {/* Content */}
-                  <div className="flex-1">
-                    <ul className="space-y-2 text-gray-800 text-sm">
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Coordinador educativo</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Director/Gestor de vinculación</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="mr-2">•</span>
-                        <span>Tutor</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
-        </div>
-      </section>
-
-      {/* Categorías Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {/* Card 1 - Estudiantes */}
-            <div className="group relative h-[600px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-              <Image
-                src="/images/estudiantes-bg.png"
-                alt="Estudiantes"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/90 group-hover:via-black/70 group-hover:to-black/50 transition-all duration-500"></div>
-
-              {/* White border frame */}
-              <div className="absolute inset-6 border-4 border-white/80 rounded-xl pointer-events-none"></div>
-
-              {/* Number */}
-              <div className="absolute top-12 left-12 text-white/90 text-8xl font-bold z-10">1</div>
-
-              {/* Title - Always visible */}
-              <div className="absolute bottom-12 left-12 right-12 z-10">
-                <h3 className="text-4xl font-bold text-white mb-4">Estudiantes</h3>
-
-                {/* Content - Visible on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-h-0 group-hover:max-h-[400px] overflow-hidden">
-                  <ul className="space-y-3 text-white text-sm">
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Contacto de manera temprana con el entorno profesional</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Desarrollo estudiantes maduros, reflexivos y críticos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Desarrollan la responsabilidad y el trabajo en equipo</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Experiencia y competitividad profesional</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Aprovechamiento y aplicación de herramientas tecnológicas y procedimientos que posee la empresa actoral</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 - Institución Educativa */}
-            <div className="group relative h-[600px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-              <Image
-                src="/images/institucion-bg.png"
-                alt="Institución Educativa"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/90 group-hover:via-black/70 group-hover:to-black/50 transition-all duration-500"></div>
-
-              {/* White border frame */}
-              <div className="absolute inset-6 border-4 border-white/80 rounded-xl pointer-events-none"></div>
-
-              {/* Number */}
-              <div className="absolute top-12 left-12 text-white/90 text-8xl font-bold z-10">2</div>
-
-              {/* Title - Always visible */}
-              <div className="absolute bottom-12 left-12 right-12 z-10">
-                <h3 className="text-4xl font-bold text-white mb-4">Institución Educativa</h3>
-
-                {/* Content - Visible on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-h-0 group-hover:max-h-[400px] overflow-hidden">
-                  <ul className="space-y-3 text-white text-sm">
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Pertinencia en los programas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Altas tasas de empleabilidad de egresados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Menor deserción</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Estándares de eficiencia y competitividad en las empresas</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Actualización de conocimientos de los docentes por la interacción directa con los formadores</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Actualización en la línea curricular</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Concepción humanista y tecnológica</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 - Organizaciones productivas */}
-            <div className="group relative h-[600px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
-              <Image
-                src="/images/organizaciones-bg.png"
-                alt="Organizaciones productivas"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/90 group-hover:via-black/70 group-hover:to-black/50 transition-all duration-500"></div>
-
-              {/* White border frame */}
-              <div className="absolute inset-6 border-4 border-white/80 rounded-xl pointer-events-none"></div>
-
-              {/* Number */}
-              <div className="absolute top-12 left-12 text-white/90 text-8xl font-bold z-10">3</div>
-
-              {/* Title - Always visible */}
-              <div className="absolute bottom-12 left-12 right-12 z-10">
-                <h3 className="text-3xl font-bold text-white mb-4">Organizaciones productivas</h3>
-
-                {/* Content - Visible on hover */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 max-h-0 group-hover:max-h-[400px] overflow-hidden">
-                  <ul className="space-y-3 text-white text-sm">
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Desarrollo de talento humano aumentando la productividad y calidad de los productos y procesos</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Seleccionar perfiles profesionales, con capacidades, habilidades y competencias que les permitan cubrir sus necesidades</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Aseguran en forma simultánea las competencias necesarias que requiere la organización Productiva</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Contar con trabajadores motivados</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Disminuir la rotación del personal</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">•</span>
-                      <span>Ahorrar los costos de reclutamiento e inducción/ entrenamiento</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
       {/* Footer Section */}
       <footer className="bg-gray-100 shadow-[0_-5px_6px_rgba(0,0,0,0.05)] font-sans">
@@ -753,7 +879,7 @@ export default function InvestigacionConsultoriaPage() {
                 <span>|</span>
                 <span>Todos los derechos reservados.</span>
                 <span>|</span>
-                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">https://translate.google.com/
+                <Link href="#" className="hover:text-[#1D63ED] transition-colors duration-300">
                   Aviso de privacidad
                 </Link>
                 <span>|</span>
