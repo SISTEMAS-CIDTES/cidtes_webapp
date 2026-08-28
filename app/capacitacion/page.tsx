@@ -70,16 +70,6 @@ export default function CapacitacionPage() {
                   </p>
 
                   <p>Hemos capacitado a más de 40,000 personas, potencializando sus competencias laborales y las respaldamos a través de:</p>
-                  {/* Imagen de respaldo */}
-<div className="mt-6 flex justify-center">
-  <Image
-    src="/images/capacitacion/respaldamos.png"
-    alt="Respaldamos nuestras capacitaciones"
-    width={660}
-    height={916}
-    className="w-full max-w-[500px] h-auto object-contain"
-  />
-</div>
                 </div>
               </div>
           
