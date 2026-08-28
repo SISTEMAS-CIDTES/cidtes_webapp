@@ -51,7 +51,7 @@ const areasConsultoria = [
         ],
       },
       {
-        title: "Asesoría e implementación de Sistemas de Gestión de la Energía \n                                        ISO 50001",
+        title: "Asesoría e implementación de Sistemas de Gestión de la Energía\nISO 50001",
         problematica: [
           "Requisito legal para los Usuarios con Patrón de Alto Consumo Energético (UPAC´s).",
           "Falta de planeación sobre gestión de la energía en las organizaciones.",
@@ -637,7 +637,7 @@ export default function ConsultoriaPage() {
                             }}>
                             {index + 1}
                           </span>
-                          <span className="block pr-2">
+                          <span className="block pr-2 whitespace-pre-line">
                             {service.title}
                           </span>
                           <span
@@ -657,7 +657,7 @@ export default function ConsultoriaPage() {
                           style={{
                             backgroundColor: selectedArea.darkColor,
                           }}>
-                          <h4 className="text-2xl font-bold">
+                          <h4 className="text-2xl font-bold whitespace-pre-line">
                             {selectedService.title}
                           </h4>
                         </div>
