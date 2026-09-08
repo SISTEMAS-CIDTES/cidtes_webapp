@@ -50,6 +50,33 @@ codes: [
 },
 ]
 
+const certificationCenters = [
+  {
+    type: "Centro de Certificación y Evaluación",
+    image: "/images/cidtes-logo.png",
+    nombre: "CIDTES Energía y Sustentabilidad",
+    email: "contacto@cidtes.org",
+    phone: "55 6812 5783",
+    standards: "",
+    address:
+      "Real de Los Reyes #303, Los Reyes, Alc. Coyoacán, Ciudad de México, C.P. 04330",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7306628558636!2d-99.15398032544623!3d19.337490281921703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0029f9da7505%3A0x23b2d1cdacd123b8!2sReal%20de%20Los%20Reyes%20303%2C%20Los%20Reyes%2C%20Coyoac%C3%A1n%2C%2004330%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1788384935591!5m2!1ses-419!2smx",
+  },
+  {
+    type: "Centros de Evaluación",
+    image: "/images/impulso.jpeg",
+    nombre:
+      "Impulso Metropolitano Mantenimiento y Servicios Integrales S.A. de C.V.",
+    email: "imv_impulso@yahoo.com.mx",
+    phone: "55 33 82 28 84",
+    standards: "EC0076, EC0248",
+    address: 
+      "Ursulo Galván 20-int 101, Coapa, Presidentes Ejidales 1ra Secc, Coyoacán, 04470 Ciudad de México, CDMX",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43237.5431816231!2d-99.13466720421167!3d19.325219676214623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce014851da767f%3A0xc348119a6ccfc834!2sImpulso%20Metropolitano%2C%20Mantenimiento%20y%20Servicios%20Integrales%20SA%20de%20CV!5e0!3m2!1ses-419!2smx!4v1788386245731!5m2!1ses-419!2smx",
+  },
+  
+]
+
 export default function CertificationContent({ activeSection }: CertificationContentProps) {
 const getBackgroundStyle = () => {
 const colors = {
@@ -92,36 +119,7 @@ return colors[activeSection || 0]
 const style = getBackgroundStyle()
 
 const [selectedEvaluator, setSelectedEvaluator] = useState<string | null>(null)
-const evaluadores = [
-  {
-    id: "numael",
-    nombre: "Ing Numael Cruz",
-    email: "ingnumaelcruz@gmail.com",
-    phone: "720 686 0472",
-    address: "Toluca, Queretaro y Guanajuato",
-    standards: "EC0076, EC0217.01, EC0586.01, EC1181",
-  },
-  {
-    id: "ilma",
-    nombre: "Ilma Gama",
-    email: "itgamaf2017@gmail.com",
-    phone: "639 124 3099",
-    address: "Hermosillo, Sonora",
-    standards: "EC0865, EC0664, EC1182, EC0217.01, EC0076",
-  },
-  {
-    id: "cidtes",
-    nombre: "CIDTES",
-    centro: "CIDTES Energía y Sustentabilidad",
-    email: "contacto@cidtes.org",
-    phone: "+52 55 6812 5783",
-    address: "Real de Los Reyes #303, Los Reyes, Alc. Coyoacán, Ciudad de México, C.P. 04330",
-  },
-]
 
-const selectedData = evaluadores.find(
-  (evaluador) => evaluador.id === selectedEvaluator
-)
 
 if (activeSection === null) {
 return (
@@ -129,15 +127,14 @@ return (
 <div className="text-right space-y-12">
 <div className="flex flex-col items-end">
 <img src="/images/ECE-logo.png" alt="Logo CONOCER" className="h-32 w-auto mb-3" />
-
-        <h2 className="text-5xl font-semibold text-gray-600 max-w-xl" style={{ fontWeight: 700 }}>
+        <h2 className="text-5xl font-semibold max-w-xl" style={{ fontWeight: 700 }}>
           Somos una Entidad de Certificación y Evaluación{" "}
           <span className="font-bold">ECE472-21</span> acreditada ante el CONOCER
         </h2>
       </div>
 
       <div>
-        <p className="text-2xl font-bold text-gray-600">Interactúa con el círculo CIDTES</p>
+        <p className="text-2xl font-bold">↖  Interactúa con el círculo CIDTES</p>
       </div>
     </div>
   </div>
@@ -153,7 +150,6 @@ return (
 {activeSection === 2 && "¿Dónde puedo certificarme?"}
 {activeSection === 3 && "Estándares ofertados"}
 </h2>
-
   <div className="space-y-4 pr-2">
     {activeSection === 0 && (
       <>
@@ -277,196 +273,138 @@ return (
     )}
 
     {activeSection === 2 && (
-      <>
-        <p
-          className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
-          style={{ color: style.accent }}
-        >
-          Estándares ofertados: EC0076, EC0865, EC1182
-        </p>
-
-        <div className="space-y-4">
-          {[
-            {
-              name: "Centro de Evaluación AUTODINERO",
-              contact: "Brenda Martínez",
-              email: "enlace@autodinero.com",
-              phone: "55 1670 1050 Ext. 1090",
-              address: "Calle Pennsylvania #127, Parque San Andrés Coyoacán, C.P. 04040, CDMX",
-              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.5758520732106!2d-99.15348902544604!3d19.34420298191641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffd3ff6eceed%3A0x1dc83641b93e05db!2sPennsylvania%20127%2C%20Parque%20San%20Andr%C3%A9s%2C%20Coyoac%C3%A1n%2C%2004040%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1782759308198!5m2!1ses-419!2smx",
-            },
-            {
-              name: "Centro de Evaluación SEVAC",
-              contact: "Lauro Romero Martínez",
-              email: "ventas@centrosevac.com",
-              phone: "818 687 5499",
-              address: "Guerrero Norte #1003, Col. Centro, C.P.64000, Monterrey, Nuevo León",
-              standards: "EC0076, EC0865, EC0664, EC1182, EC1306",
-              map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5013.2061751341425!2d-100.31599794052273!3d25.684741112270476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629584f58f6199%3A0x91fcb8373215747e!2sVicente%20Guerrero%201003%2C%20Centro%2C%2064000%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1782759246234!5m2!1ses-419!2smx",
-            },
-          ].map((center, idx) => (
-            <div key={idx}>
-              {idx === 1 && center.standards && (
-                <p
-                  className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
-                  style={{ color: style.accent }}
-                >
-                  Estándares ofertados: {center.standards}
-                </p>
-              )}
-
-              <div
-                className="border-l-4 px-6 py-5 rounded-xl shadow-md overflow-hidden"
-                style={{
-                  borderColor: style.borderColor,
-                  backgroundColor: "white",
-                  borderLeftWidth: "6px",
-                }}
+      <div className="space-y-8">
+        {certificationCenters.map((center, index) => (
+          <div key={center.nombre} className="space-y-3">
+            {index === 0 && (
+              <h3
+                className="text-2xl font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block"
+                style={{ color: style.title }}
               >
-                <div className="flex gap-4">
-                  <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 mb-1 text-base">{center.name}</h3>
-                    <p className="text-base text-gray-700 font-semibold mb-3">{center.contact}</p>
+                Centro de Certificación y Evaluación
+              </h3>
+            )}
+            {index === 1 && (
+              <h3
+                className="text-2xl font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block"
+                style={{ color: style.title }}
+              >
+                Centros de Evaluación
+              </h3>
+            )}
 
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <Mail size={16} style={{ color: style.accent, flexShrink: 0 }} />
-                        <a href={`mailto:${center.email}`} className="text-sm text-gray-700 hover:underline">
-                          {center.email}
-                        </a>
-                      </div>
+            <div
+              className="
+                w-fit
+                max-w-full
+                bg-white
+                rounded-2xl
+                shadow-md
+                overflow-hidden
+                border-l-4
+              "
+              style={{
+                borderColor: style.borderColor,
+              }}
+            >
+              <div className="flex flex-col md:flex-row items-stretch">
+                <div className="flex-1 min-w-0 p-6">
+                  <h4
+                    className="text-xl font-bold mb-4"
+                    style={{ color: style.title }}
+                  >
+                    {center.nombre}
+                  </h4>
 
-                      <div className="flex items-center gap-3">
-                        <Phone size={16} style={{ color: style.accent, flexShrink: 0 }} />
-                        <span className="text-sm text-gray-700">{center.phone}</span>
-                      </div>
-
+                  <div className="space-y-3 text-sm text-gray-700">
+                    {/* Correo */}
+                    {center.email && (
                       <div className="flex items-start gap-3">
-                        <MapPin size={16} style={{ color: style.accent, marginTop: "2px", flexShrink: 0 }} />
-                        <span className="text-sm text-gray-700">{center.address}</span>
-                      </div>
-                    </div>
-                  </div>
+                        <Mail
+                          className="w-5 h-5 flex-shrink-0 mt-0.5"
+                          style={{ color: style.title }}
+                        />
 
-                  <div className="w-48 h-40 flex-shrink-0 rounded-lg overflow-hidden shadow-md">
+                        <span className="break-words">
+                          {center.email}
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Teléfono */}
+                    {center.phone && (
+                      <div className="flex items-start gap-3">
+                        <Phone
+                          className="w-5 h-5 flex-shrink-0 mt-0.5"
+                          style={{ color: style.title }}
+                        />
+                        <span>
+                          {center.phone}
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Dirección */}
+                    {center.address && (
+                      <div className="flex items-start gap-3">
+                        <MapPin
+                          className="w-5 h-5 flex-shrink-0 mt-0.5"
+                          style={{ color: style.title }}
+                        />
+                        <span className="leading-relaxed">
+                          {center.address}
+                        </span>
+                      </div>
+                    )}
+
+                    {/* Estándares */}
+                    {center.standards && (
+                      <div className="flex items-start gap-3">
+                        <span>
+                          <strong>Estándares:</strong>{" "}
+                          {center.standards}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* MAPA */}
+                <div
+                  className="
+                    w-full
+                    md:w-[250px]
+                    lg:w-[250px]
+                    flex-shrink-0
+                    p-4
+                  "
+                >
+                  <div
+                    className="
+                      w-full
+                      h-full
+                      min-h-[220px]
+                      rounded-xl
+                      overflow-hidden
+                      shadow-sm
+                    "
+                  >
                     <iframe
-                      title={`Mapa de ${center.name}`}
                       src={center.map}
+                      className="w-full h-full"
+                      style={{ border: 0 }}
+                      allowFullScreen
                       loading="lazy"
                       referrerPolicy="no-referrer-when-downgrade"
-                      className="w-full h-full border-0"
-                      allowFullScreen
+                      title={`Ubicación de ${center.nombre}`}
                     />
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="flex gap-3 mt-6">
-          {evaluadores.map((evaluador) => (
-            <button
-              key={evaluador.id}
-              onClick={() =>
-                setSelectedEvaluator(
-                  selectedEvaluator === evaluador.id
-                    ? null
-                    : evaluador.id
-                )
-              }
-              className={`flex-1 px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 hover:shadow-lg hover:scale-105 ${
-                selectedEvaluator === evaluador.id
-                  ? "ring-4 ring-blue-200"
-                  : ""
-              }`}
-              style={{ backgroundColor: style.accent }}
-            >
-              {evaluador.nombre}
-            </button>
-          ))}
-        </div>
-
-        {selectedData && (
-          <div className="mt-6">
-            {selectedData.standards && (
-              <p
-                className="text-base font-semibold mb-4 bg-white px-3 py-2 rounded-lg inline-block"
-                style={{ color: style.accent }}
-              >
-                Estándares ofertados: {selectedData.standards}
-              </p>
-            )}
-
-            <div
-              className="border-l-4 px-6 py-5 rounded-xl shadow-md"
-              style={{
-                borderColor: style.borderColor,
-                backgroundColor: "white",
-                borderLeftWidth: "6px",
-              }}
-            >
-              <h3 className="font-bold text-gray-900 mb-1 text-base">
-                {selectedData.centro || "Evaluador independiente"}
-              </h3>
-
-              <p className="text-base text-gray-700 font-semibold mb-3">
-                {selectedData.nombre}
-              </p>
-
-              <div className="space-y-2">
-
-                <div className="flex items-center gap-3">
-                  <Mail
-                    size={16}
-                    style={{
-                      color: style.accent,
-                      flexShrink: 0,
-                    }}
-                  />
-
-                  <a
-                    href={`mailto:${selectedData.email}`}
-                    className="text-sm text-gray-700 hover:underline"
-                  >
-                    {selectedData.email}
-                  </a>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Phone
-                    size={16}
-                    style={{
-                      color: style.accent,
-                      flexShrink: 0,
-                    }}
-                  />
-
-                  <span className="text-sm text-gray-700">
-                    {selectedData.phone}
-                  </span>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin
-                    size={16}
-                    style={{
-                      color: style.accent,
-                      marginTop: "2px",
-                      flexShrink: 0,
-                    }}
-                  />
-
-                  <span className="text-sm text-gray-700">
-                    {selectedData.address}
-                  </span>
-                </div>
-
-              </div>
-            </div>
           </div>
-        )}
-      </>
+        ))}
+      </div>
     )}
 
     {activeSection === 3 && (

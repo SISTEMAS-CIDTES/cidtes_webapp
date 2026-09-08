@@ -17,15 +17,15 @@ export default function HomePage() {
 
   const carouselImages = [
     "/images/home/flayers/sostenibilidad.jpeg",
-    "/images/home/flayers/sistemas-gestión-energía-1.jpeg",
-    "/images/home/flayers/EC0391-1.jpeg",
-    "/images/home/flayers/EC0397-1.jpeg",
-    "/images/home/flayers/EC0490-1.jpeg",
-    "/images/home/flayers/EC0493-1.jpeg",
-    "/images/home/flayers/EC0517-4.jpeg",
-    "/images/home/flayers/EC0680-1.jpeg",
-    "/images/home/flayers/EC1017-2.jpeg",
-    "/images/home/flayers/EC1018-1.jpeg"
+    "/images/home/flayers/sistemas-gestión-energía-2.jpeg",
+    "/images/home/flayers/EC0391-2.jpeg",
+    "/images/home/flayers/EC0397-2.jpeg",
+    "/images/home/flayers/EC0490-2.jpeg",
+    "/images/home/flayers/EC0493-2.jpeg",
+    "/images/home/flayers/EC0517-5.jpeg",
+    "/images/home/flayers/EC0680-3.jpeg",
+    "/images/home/flayers/EC1017-1.jpeg",
+    "/images/home/flayers/EC1018-2.jpeg"
   ]
 
   const commitments = [
@@ -525,7 +525,7 @@ export default function HomePage() {
                 <div className="w-16 sm:w-20 lg:w-24 h-1 bg-white mb-4"></div>
                 <p
                   key={`desc-${currentLetter}`}
-                  className="text-white text-sm sm:text-base lg:text-lg max-w-2xl px-4"
+                  className="text-white text-sm px-4 sm:px-20 lg:text-lg max-w-4xl"
                 >
                   {cidtesLetters[currentLetter].description}
                 </p>
@@ -558,18 +558,11 @@ export default function HomePage() {
               <div className="relative w-full mx-auto">
                 {/* Title - Aligned with video left edge */}
                 <div className="text-left mb-8">
-                  <div className="inline-block">
-                    <div className="h-1 w-16 bg-blue-600 mb-4"></div>
-                    <h2
-                      className="text-3xl sm:text-4xl font-extrabold bg-clip-text text-transparent"
-                      style={{
-                        background: "linear-gradient(to right, #662686, #01A0E1)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                      }}
-                    >
-                      Nuestra Experiencia
-                    </h2>
+                    <div className="inline-block">
+                      <div className="h-1 w-16 bg-blue-600 mb-4"></div>
+                        <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                          Nuestra Experiencia
+                        </h2>
                   </div>
                 </div>
 
@@ -602,7 +595,8 @@ export default function HomePage() {
             {/* Clients Carousel */}
             <div className="mb-12">
               <div className="text-center mb-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#397383] mb-4">Nuestra Cartera de Clientes</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                  Nuestra Cartera de Clientes</h2>
               </div>
               <div className="relative overflow-hidden">
                 {/* Gradient overlays for fade effect */}
@@ -630,7 +624,8 @@ export default function HomePage() {
             {/* Partners Carousel */}
             <div className="mb-12">
               <div className="text-center mb-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#397383] mb-4">Alianzas Estratégicas</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                  Alianzas Estratégicas</h2>
               </div>
               <div className="relative overflow-hidden">
                 {/* Gradient overlays for fade effect */}
@@ -658,7 +653,8 @@ export default function HomePage() {
             {/* Collaborations Carousel */}
             <div className="mb-8">
               <div className="text-center mb-6">
-                <h2 className="text-2xl sm:text-3xl font-bold text-[#397383] mb-4">Colaboraciones</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+                  Colaboraciones</h2>
               </div>
               <div className="relative overflow-hidden">
                 {/* Gradient overlays for fade effect */}
@@ -723,7 +719,7 @@ export default function HomePage() {
                   <div className="text-left">
                     <div className="inline-block">
                       <div className="h-1 w-16 bg-blue-600 mb-4"></div>
-                      <h2 className="text-3xl sm:text-4xl font-bold text-[#397383] mb-6">
+                      <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
                         {selectedService && serviceContent[selectedService]
                           ? serviceContent[selectedService].title
                           : "Tipo de Servicio"}

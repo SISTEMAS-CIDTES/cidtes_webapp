@@ -55,8 +55,7 @@ export function CourseSection({ title, imageSrc, imageAlt, reverse = false, cour
                 onClick={() => setIsModalOpen(true)}
                 className={`font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-xl whitespace-nowrap text-sm sm:${BUTTON_CONFIG.fontSize} px-7 py-2.5 sm:px-[8.75rem] sm:py-[1.5rem]`}
                 style={{
-                  background: "linear-gradient(135deg, #84cc16 0%, #65a30d 100%)",
-                  boxShadow: "0 4px 15px rgba(132, 204, 22, 0.4)",
+                  background: "linear-gradient(to right, #084E9F 0%, #01A0E1 47.9%, #662686 95.8%)",
                   borderRadius: "0.75rem",
                 }}
               >

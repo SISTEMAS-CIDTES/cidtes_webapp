@@ -92,8 +92,13 @@ export default function InvestigacionConsultoriaPage() {
                 className="h-2 w-auto"
               />
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a365d]">
-              ODS y agenda 2030
+            <h2 className="text-4xl lg:text-5xl font-bold"
+              style={{
+                background: "linear-gradient(90deg, #5f2f8d, #4d469d, #395eaf, #2477c2, #0e93d7)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent"
+              }}>
+              ODS y Agenda 2030
             </h2>
           </div>
 
@@ -188,15 +193,27 @@ export default function InvestigacionConsultoriaPage() {
         <div className="container mx-auto px-4">
           {/* Title */}
           <div className="text-center mb-12">
-            <h2
-              className="text-5xl lg:text-6xl font-bold inline-block pb-3"
-              style={{
-                color: '#14b8a6',
-                borderBottom: '5px solid #14b8a6'
-              }}
-            >
-              DESARROLLO SOCIAL, ECONOMICO Y AMBIENTAL 
-            </h2>
+            <div className="inline-block">
+              <h2
+                className="text-4xl lg:text-5xl font-bold pb-3"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, #5f2f8d, #4d469d, #395eaf, #2477c2, #0e93d7)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Desarrollo Social, Económico y Ambiental
+              </h2>
+              <div
+                className="h-[5px] w-full mt-1"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #5f2f8d, #4d469d, #395eaf, #2477c2, #0e93d7)",
+                }}
+              />
+            </div>
           </div>
 
           {/* Image */}
@@ -429,12 +446,27 @@ export default function InvestigacionConsultoriaPage() {
         <div className="container mx-auto px-4">
           {/* Title */}
           <div className="text-center mb-12">
-            <div className="flex justify-center mb-4">
-              <div className="w-16 h-1 rounded-full bg-gradient-to-r from-[#0E9991] to-[#662686]"></div>
+            <div className="inline-block">
+              <h2
+                className="text-4xl lg:text-5xl font-bold pb-3"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, #5f2f8d, #4d469d, #395eaf, #2477c2, #0e93d7)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                Beneficios de la Educación Dual
+              </h2>
+              <div
+                className="h-[5px] w-full mt-1"
+                style={{
+                  background:
+                    "linear-gradient(90deg, #5f2f8d, #4d469d, #395eaf, #2477c2, #0e93d7)",
+                }}
+              />
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#1a365d]">
-              Beneficios de la Educación Dual
-            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {/* Card 1 - Estudiantes */}

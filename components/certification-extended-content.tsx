@@ -13,120 +13,242 @@ const scrollToContact = () => {
   }
 }
 
-const centros = [
+const independentEvaluators = [
   {
-    image: "images/impulso.jpeg",
-    nombre: "Impulso Metropolitano Mantenimiento y Servicios Integrales S.A. de C.V.",
-    email : "imv_impulso@yahoo.com.mx",
-    phone: "55 33 82 28 84",
-    standards: "EC0076, EC0248",
+    nombre: "Ilma Gama",
+    email: "itgamaf2017@gmail.com",
+    phone: "639 124 3099",
+    address: "Hermosillo, Sonora",
+    standards: "EC0865, EC0664, EC1182, EC0217.01, EC0076",
   },
   {
-    image: "images/uandani.jpeg",
-    nombre: "Centro Ecotecnólogico UANDANI",
-    email : "uandani@gira.org.mx",
+    nombre: "Ing. Numael Cruz",
+    email: "ingnumaelcruz@gmail.com",
+    phone: "720 686 0472",
+    address: "Toluca, Querétaro y Guanajuato",
+    standards: "EC0076, EC0217.01, EC0586.01, EC1181",
+  },
+]
+
+const evaluationCenters = [
+  {
+    nombre: "Centro Ecotecnológico UANDANI",
+    email: "uandani@gira.org.mx",
     phone: "43 42 66 40 09",
-    address: "Carretera Pátzcuaro a Erongaricuaro No.28, Col. Tzentzenguaro, Pátzcuaro, Michoacan, 61613",
+    standards: "",
+    address:
+      "Carretera Pátzcuaro a Erongaricuaro No. 28, Col. Tzentzenguaro, Pátzcuaro, Michoacán, 61613",
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30082.01436749158!2d-101.67883334545344!3d19.530800500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d95000991b829%3A0xe9e4598744651da0!2sUandani!5e0!3m2!1ses-419!2smx!4v1788386351531!5m2!1ses-419!2smx",
+  },
+  {
+    nombre: "Centro de Evaluación AUTODINERO",
+    contacto: "Brenda Martínez",
+    email: "enlace@autodinero.com",
+    phone: "55 1670 1050 Ext. 1090",
+    standards: "EC0076, EC0865, EC1182",
+    address:
+      "Calle Pennsylvania #127, Parque San Andrés Coyoacán, C.P. 04040, CDMX",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15058.303406624362!2d-99.150914!3d19.344203!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffd3ff6eceed%3A0x1dc83641b93e05db!2sPennsylvania%20127%2C%20Parque%20San%20Andr%C3%A9s%2C%20Coyoac%C3%A1n%2C%2004040%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1788744979924!5m2!1ses-419!2smx",
+  },
+  {
+    nombre: "Centro de Evaluación SEVAC",
+    contacto: "Lauro Romero Martínez",
+    email: "ventas@centrosevac.com",
+    phone: "818 687 5499",
+    standards: "EC0076, EC0865, EC0664, EC1182, EC1306",
+    address:
+      "Guerrero Norte #1003, Col. Centro, C.P. 64000, Monterrey, Nuevo León",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28764.932608052564!2d-100.312124!3d25.684002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86629584f58f6199%3A0x91fcb8373215747e!2sVicente%20Guerrero%201003%2C%20Centro%2C%2064000%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1788745242438!5m2!1ses-419!2smx",
   },
 ]
 
 export default function CertificationExtendedContent() {
   return (
-    <div className="w-full space-y-16 py-12 -mt-24">
-      <div className="w-full max-w-7xl mx-auto space-y-16 py-12 px-4 md:px-8">
-        <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
-          <h2 className="text-4xl font-bold text-[#005BB1] text-center">
-            Centros de Evaluación
-          </h2>
+    <div className="flex flex-col justify-start min-h-screen space-y-8 pr-4 pt-12 pb-12 w-full py-12 -mt-23">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-5 items-start -mt-20">
+      <div className="space-y-5 -mt-28">
+        <h3 className="text-2xl font-bold bg-white px-4 py-2 rounded-lg shadow-sm inline-block text-[#003D7A]">
+          Evaluadores Independientes
+        </h3>
+        {independentEvaluators.map((evaluator) => (
+          <div
+            key={evaluator.nombre}
+            className="
+              bg-white
+              rounded-2xl
+              shadow-md
+              border-l-4
+              border-[#005BB1]
+              overflow-hidden
+            "
+          >
+            <div className="p-5">
+              <h4 className="text-xl font-bold text-[#003D7A] mb-4">
+                {evaluator.nombre}
+              </h4>
 
-          <div className="space-y-6">
-            {centros.map((centro) => (
-              <div
-                key={centro.nombre}
-                className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-xl shadow-md border-l-4 w-full"
-                style={{
-                  borderColor: "#005BB1",
-                  backgroundColor: "white",
-                }}
-              >
-
-                {/* Imagen */}
-                <div className="w-full sm:w-1/3 md:w-2/5 flex-shrink-0">
-                  <img
-                    src={`/${centro.image}`}
-                    alt={centro.nombre}
-                    className="w-full h-auto max-h-64 object-contain rounded-lg shadow-md"
+              <div className="space-y-3 text-sm text-gray-700">
+                {/* Email */}
+                <div className="flex items-start gap-3">
+                  <Mail
+                    className="w-5 h-5 flex-shrink-0 mt-0.5"
+                    style={{ color: "#003D7A" }}
                   />
+                  <span className="break-words">
+                    {evaluator.email}
+                  </span>
                 </div>
 
-                {/* Información */}
-                <div className="flex-1 min-w-0 space-y-3">
+                {/* Teléfono */}
+                <div className="flex items-start gap-3">
+                  <Phone
+                    className="w-5 h-5 flex-shrink-0 mt-0.5"
+                    style={{ color: "#003D7A" }}
+                  />
+                  <span>
+                    {evaluator.phone}
+                  </span>
+                </div>
 
-                  <h3 className="text-2xl font-bold text-gray-900 break-words">
-                    {centro.nombre}
-                  </h3>
+                {/* Dirección */}
+                {evaluator.address && (
+                  <div className="flex items-start gap-3">
+                    <MapPin
+                      className="w-5 h-5 flex-shrink-0 mt-0.5"
+                      style={{ color: "#003D7A" }}
+                    />
+                    <span className="leading-relaxed">
+                      {evaluator.address}
+                    </span>
+                  </div>
+                )}
 
-                  {centro.email && (
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Mail
-                        size={20}
-                        className="flex-shrink-0"
-                        style={{ color: "#005BB1" }}
-                      />
+                {/* Estándares */}
+                {evaluator.standards && (
+                  <div className="flex items-start gap-3">
+                    <span>
+                      <strong>Estándares:</strong>{" "}
+                      {evaluator.standards}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
-                      <a
-                        href={`mailto:${centro.email}`}
-                        className="hover:underline break-all"
-                      >
-                        {centro.email}
-                      </a>
-                    </div>
-                  )}
+      <div className="space-y-5 -mt-10">
+        {evaluationCenters.map((center) => (
+          <div
+            key={center.nombre}
+            className="
+              bg-white
+              rounded-2xl
+              shadow-md
+              overflow-hidden
+              border-l-4
+            "
+            style={{
+              borderColor: "#005BB1",
+            }}
+          >
 
-                  {centro.phone && (
-                    <div className="flex items-center gap-3 text-gray-700">
-                      <Phone
-                        size={20}
-                        className="flex-shrink-0"
-                        style={{ color: "#005BB1" }}
-                      />
+            <div className="flex flex-col md:flex-row items-stretch">
+              <div className="flex-1 min-w-0 p-5">
+                <h4
+                  className="text-xl font-bold mb-4"
+                  style={{ color: "#003D7A" }}
+                >
+                  {center.nombre}
+                </h4>
 
-                      <span>{centro.phone}</span>
-                    </div>
-                  )}
+                {/* Contacto */}
+                {center.contacto && (
+                  <p className="text-base font-semibold text-gray-700 mb-3">
+                    {center.contacto}
+                  </p>
+                )}
 
-                  {centro.address && (
-                    <div className="flex items-start gap-3 text-gray-700">
+                <div className="space-y-3 text-sm text-gray-700">
+                  {/* Email */}
+                  <div className="flex items-start gap-3">
+                    <Mail
+                      className="w-5 h-5 flex-shrink-0 mt-0.5"
+                      style={{ color: "#003D7A" }}
+                    />
+                    <span className="break-words">
+                      {center.email}
+                    </span>
+                  </div>
+
+                  {/* Teléfono */}
+                  <div className="flex items-start gap-3">
+                    <Phone
+                      className="w-5 h-5 flex-shrink-0 mt-0.5"
+                      style={{ color: "#003D7A" }}
+                    />
+                    <span>
+                      {center.phone}
+                    </span>
+                  </div>
+
+                  {/* Dirección */}
+                  {center.address && (
+                    <div className="flex items-start gap-3">
                       <MapPin
-                        size={20}
-                        className="flex-shrink-0 mt-1"
-                        style={{ color: "#005BB1" }}
+                        className="w-5 h-5 flex-shrink-0 mt-0.5"
+                        style={{ color: "#003D7A" }}
                       />
-
-                      <span>{centro.address}</span>
+                      <span className="leading-relaxed">
+                        {center.address}
+                      </span>
                     </div>
                   )}
 
-                  {centro.standards && (
-                    <div className="pt-2">
-                      <p className="font-semibold text-[#005BB1]">
-                        Estándares ofertados:
-                      </p>
-
-                      <p className="text-gray-700">
-                        {centro.standards}
-                      </p>
+                  {/* Estándares */}
+                  {center.standards && (
+                    <div className="flex items-start gap-3">
+                      <span>
+                        <strong>Estándares:</strong>{" "}
+                        {center.standards}
+                      </span>
                     </div>
                   )}
-
                 </div>
               </div>
-            ))}
+
+              {/* MAPA */}
+              <div className="w-full md:w-[200px] flex-shrink-0 p-4">
+                <div
+                  className="
+                    w-full
+                    h-full
+                    min-h-[180px]
+                    rounded-xl
+                    overflow-hidden
+                    shadow-sm
+                  "
+                >
+                  <iframe
+                    src={center.map}
+                    className="w-full h-full"
+                    style={{
+                      border: 0,
+                      minHeight: "180px",
+                    }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Ubicación de ${center.nombre}`}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-
-        </div>
-
+        ))}
       </div>
+    </div>
 
       {/* Section: What is CE/EI */}
       <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
