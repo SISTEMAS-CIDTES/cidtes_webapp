@@ -35,7 +35,7 @@ const evaluationCenters = [
     nombre: "Centro Ecotecnológico UANDANI",
     email: "uandani@gira.org.mx",
     phone: "43 42 66 40 09",
-    standards: "",
+    standards: "EC0076",
     address:
       "Carretera Pátzcuaro a Erongaricuaro No. 28, Col. Tzentzenguaro, Pátzcuaro, Michoacán, 61613",
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30082.01436749158!2d-101.67883334545344!3d19.530800500000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d95000991b829%3A0xe9e4598744651da0!2sUandani!5e0!3m2!1ses-419!2smx!4v1788386351531!5m2!1ses-419!2smx",
