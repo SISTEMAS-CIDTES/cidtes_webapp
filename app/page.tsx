@@ -16,15 +16,17 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   const carouselImages = [
-    "/images/home/flayers/sistemas-gestión-energía-1.jpeg",
-    "/images/home/flayers/EC0391-1.jpeg",
-    "/images/home/flayers/EC0397-1.jpeg",
-    "/images/home/flayers/EC0490-1.jpeg",
-    "/images/home/flayers/EC0493-1.jpeg",
-    "/images/home/flayers/EC0517-1.jpeg",
-    "/images/home/flayers/EC0680-2.jpeg",
-    "/images/home/flayers/EC1017-1.jpeg",
-    "/images/home/flayers/EC1018-1.jpeg"
+    "/images/home/flayers/Promociones Buen Fin CIDTES Sustentable.png",
+    "/images/home/flayers/Plan CIDTES para salir de DAC.png",
+    "/images/home/flayers/sistemas-gestión-energía-2.jpeg",
+    "/images/home/flayers/EC0391-2.jpeg",
+    "/images/home/flayers/EC0397-2.jpeg",
+    "/images/home/flayers/EC0490-2.jpeg",
+    "/images/home/flayers/EC0493-2.jpeg",
+    "/images/home/flayers/EC0517-2.jpeg",
+    "/images/home/flayers/EC0680-3.jpeg",
+    "/images/home/flayers/EC1017-2.jpeg",
+    "/images/home/flayers/EC1018-2.jpeg"
   ]
 
   const commitments = [
