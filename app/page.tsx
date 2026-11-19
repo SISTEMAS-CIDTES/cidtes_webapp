@@ -16,7 +16,6 @@ export default function HomePage() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
 
   const carouselImages = [
-    "/images/home/flayers/Promociones Buen Fin CIDTES Sustentable.png",
     "/images/home/flayers/Plan CIDTES para salir de DAC.png",
     "/images/home/flayers/sistemas-gestión-energía-2.jpeg",
     "/images/home/flayers/EC0391-2.jpeg",
